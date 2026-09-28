@@ -1,11 +1,186 @@
-.login-container{
-   display: flex;
-   flex-direction: row;
+.login-container {
+  display: flex;
+  flex-direction: row;
 }
 
 /* --thippes-code write below------ */
 
-
-
-
 /* --sridhar-code write below------ */
+
+.login-form h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  color: #132a56;
+}
+
+.login-form p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #333334;
+}
+
+.login-form label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #111112;
+}
+
+.login-inputs {
+  width: 600px;
+  height: 55px;
+  padding-top: 15px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 40px;
+  border: 1px solid #132a5680;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.login-email-wrapper,
+.login-password-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+
+.input-mail-icon {
+  position: absolute;
+  width: 20px;
+  height: 16px;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-password-icon {
+  position: absolute;
+  width: 16px;
+  height: 21px;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.password-label-row label {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #111112;
+}
+
+.password-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+}
+
+.forgot-password {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #132a56;
+  text-decoration: none;
+}
+
+.login-inputs {
+  width: 600px;
+  height: 55px;
+  padding: 15px 16px 16px 48px;
+  background: #ffffff;
+  border: 1px solid #132a5680;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.login-inputs::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #777587;
+}
+
+.login-inputs:focus {
+  border-color: #132a56;
+}
+
+.login-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: 1px solid #132a5680;
+  border-radius: 4px;
+}
+
+.login-checkbox label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #777587;
+}
+
+.sign-in-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  background: #132a56;
+  border: none;
+  cursor: pointer;
+}
+
+.right-arrow {
+  width: 20px;
+  height: 20px;
+}
+
+.signin-button-for-login {
+  width: 600px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background: #132a56;
+  border: none;
+  border-radius: 8px;
+  opacity: 1;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #ffffff;
+}
