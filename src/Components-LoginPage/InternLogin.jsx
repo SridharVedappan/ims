@@ -1,19 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../Components-LoginPage/InternLogin.css";
 import MailIcon from "../assets/login/MailIcon.png";
 import PasswordIcon from "../assets/login/PasswordIcon.png";
 import RightArrow from "../assets/login/right-arrow.png";
 import GoogleIcon from "../assets/login/google-icon.png";
+import EyeOpen from "../assets/login/eye-open.png";
+import EyeClose from "../assets/login/eye-close.png";
 
 export const InternLogin = () => {
+  const initialValue = { email: "", password: "" };
+  const [formValues, setFormValues] = useState(initialValue);
+  const [errors, setErrors] = useState({});
+  const [passwordShow, setPasswordShow] = useState(true);
+
+  const navigate = useNavigate();
+
+  const togglePassword = () => {
+    setPasswordShow((prev) => !prev);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormValues((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let newErrors = {};
+
+    if (!formValues.email.trim()) {
+      newErrors.email = "Email is required *";
+    }
+    if (!formValues.password.trim()) {
+      newErrors.password = "Password is required *";
+    }
+    setErrors(newErrors);
+
+    // No errors move to next page
+    if (Object.keys(newErrors).length === 0) {
+      alert("Login successful!");
+      setFormValues(initialValue);
+      navigate("/");
+    }
+  };
+
   return (
     <div className="login-container">
       <div className="login-left-container">left</div>
       {/* -------------------------------------------------------------------------------------------------------------------------------- */}
 
       <div className="login-right-container">
-        <form className="login-form">
+        <form onSubmit={handleSubmit} className="login-form">
           <header className="login-right-header">
             <h1>Welcome Back</h1>
             <p>Manage your career journey</p>
@@ -28,11 +75,16 @@ export const InternLogin = () => {
                 <img src={MailIcon} alt="Email" className="input-mail-icon" />
                 <input
                   type="email"
-                  id="email"
-                  className="login-inputs"
+                  name="email"
                   placeholder="Enter Email address"
+                  value={formValues.email}
+                  onChange={handleChange}
+                  className={
+                    errors.email ? "login-inputs input-error" : "login-inputs"
+                  }
                 />
               </div>
+              {errors.email && <p className="error-message">{errors.email}</p>}
             </div>
 
             <div className="login-password-container">
@@ -53,20 +105,40 @@ export const InternLogin = () => {
                 />
 
                 <input
-                  type="password"
-                  id="password"
-                  className="login-inputs"
+                  type={passwordShow ? "password" : "text"}
+                  name="password"
                   placeholder="Enter your password"
+                  value={formValues.password}
+                  onChange={handleChange}
+                  className={
+                    errors.password
+                      ? "login-inputs input-error"
+                      : "login-inputs"
+                  }
                 />
+                <span className="password-eye-icon" onClick={togglePassword}>
+                  <img
+                    src={passwordShow ? EyeOpen : EyeClose}
+                    className={passwordShow ? "eye-open" : "eye-close"}
+                    alt="show-hide"
+                  />
+                </span>
               </div>
+              {errors.password && (
+                <p className="error-message">{errors.password}</p>
+              )}
             </div>
 
             <div className="login-checkbox">
-              <input type="checkbox" className="login-keep-signed-in" />
+              <input
+                type="checkbox"
+                id="keep-signed-in"
+                className="login-keep-signed-in"
+              />
               <label htmlFor="keep-signed-in">Keep me signed in</label>
             </div>
 
-            <button className="signin-button-for-login">
+            <button type="submit" className="signin-button-for-login">
               <span>Sign In</span>
               <img src={RightArrow} alt="Arrow" className="right-arrow" />
             </button>
@@ -77,7 +149,7 @@ export const InternLogin = () => {
           </div>
 
           <div className="login-google-btn-conatiner">
-            <button className="google-login-container">
+            <button type="button" className="google-login-container">
               <img
                 src={GoogleIcon}
                 alt="google-icon"
@@ -95,15 +167,15 @@ export const InternLogin = () => {
             </div>
 
             <div className="login-footer-links">
-              <Link href="/help" className="login-footer-link">
+              <Link to="/help" className="login-footer-link">
                 Help
               </Link>
-              <span className="login-dot"></span>
-              <Link href="/privacy" className="login-footer-link">
+
+              <Link to="/privacy" className="login-footer-link">
                 Privacy
               </Link>
-              <span className="login-dot"></span>
-              <Link href="/terms" className="login-footer-link">
+
+              <Link to="/terms" className="login-footer-link">
                 Terms
               </Link>
             </div>

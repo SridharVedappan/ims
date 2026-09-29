@@ -87,6 +87,24 @@
   transform: translateY(-50%);
 }
 
+.eye-open {
+  position: absolute;
+  width: 22px;
+  height: 15px;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.eye-close {
+  position: absolute;
+  width: 22px;
+  height: 19px;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .password-label-row label {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -119,7 +137,7 @@
   height: 55px;
   padding: 15px 16px 16px 48px;
   background: #ffffff;
-  border: 1px solid #132a5680;
+  border: 1.6px solid #132a5663;
   border-radius: 8px;
   box-sizing: border-box;
   outline: none;
@@ -316,4 +334,14 @@
   flex-shrink: 0;
   border-radius: 9999px;
   background: #132a563d;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.input-error {
+  border: 1px solid red;
 }
