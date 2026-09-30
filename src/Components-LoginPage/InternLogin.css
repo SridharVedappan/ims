@@ -4,6 +4,212 @@
 }
 
 /* --thippes-code write below------ */
+.login-container {
+  padding: 55px 40px;
+  overflow: hidden;
+  background: linear-gradient(270deg, #ffffff 35%, #566b94 93%);
+}
+
+.login-inner-container {
+  border: 1px solid none;
+  display: flex;
+}
+
+.login-left-content {
+  width: 810px;
+  height: auto;
+}
+
+.login-mainhead {
+  display: flex;
+  gap: 14px;
+}
+.login-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #176789;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-logo img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.login-mainheader h3 {
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.5px;
+  vertical-align: middle;
+}
+
+.login-mainheader p {
+  width: 197px;
+  height: 16px;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.3px;
+  vertical-align: middle;
+}
+
+.login-middlecontent {
+  display: grid;
+  gap: 35px;
+}
+.login-maincontent h2 {
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.8px;
+  vertical-align: middle;
+  margin-top: 25px;
+}
+
+.login-maincontent p {
+  width: auto;
+  height: 44px;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: SemiBold;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  margin-top: 12px;
+}
+
+.login-Statistics {
+  display: flex;
+  gap: 46px;
+}
+.login-Stat-card {
+  border: 1px solid #132a5633;
+  width: 210px;
+  height: 92px;
+  border-radius: 12px;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  background-color: #ffffffd9;
+}
+
+.login-statcard-content {
+  display: grid;
+  padding-left: 55px;
+  padding-top: 15px;
+  gap: 5px;
+}
+
+.login-statcard-content strong {
+  color: #132a56;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 22px;
+  line-height: 29px;
+  vertical-align: middle;
+}
+
+.login-statcard-content span {
+  color: #566b94;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 8.5px;
+  line-height: 11.75px;
+  letter-spacing: 0.52px;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.login-statcard-content small {
+  color: #109d58;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 10px;
+  line-height: 11px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.login-imagecontent {
+  display: grid;
+  justify-content: center;
+}
+.login-bottom-card-container {
+  margin-left: 125px;
+}
+.login-vector-stock {
+  width: auto;
+  height: 480px;
+  padding-left: 110px;
+  mix-blend-mode: darken;
+  margin: 50px 300px 20px 50px;
+}
+
+.login-bottomcard {
+  border: 1px solid #ffffffcc;
+  margin-left: 55px;
+  width: 680px;
+  height: 72px;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  background-color: #ffffffbf;
+  display: flex;
+  padding-left: 17px;
+  gap: 10px;
+  align-items: center;
+}
+
+.login-white-shield {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.login-bottomcontent strong {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 12.5px;
+  line-height: 15.56px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #132a56;
+}
+
+.login-bottomcontent p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  color: #132a56;
+}
+
+.login-bottomcontent p span {
+  color: #566b94;
+}
 
 /* --sridhar-code write below------ */
 
@@ -38,7 +244,6 @@
 }
 
 .login-form-container label {
-  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -99,7 +304,7 @@
 .eye-close {
   position: absolute;
   width: 22px;
-  height: 19px;
+  height: 20px;
   right: 16px;
   top: 50%;
   transform: translateY(-50%);
