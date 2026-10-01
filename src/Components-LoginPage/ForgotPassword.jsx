@@ -13,7 +13,10 @@ import LeftArrow from "../assets/login/left-arrow.png";
 export const ForgotPassword = () => {
   const [radio, setRadio] = useState("email");
 
+  const navigate = useNavigate();
+
   const handleSendCode = () => {
+    alert("OTP sent successfully.");
     navigate("/forgot-password-otp", {
       state: {
         method: radio,
@@ -82,7 +85,6 @@ export const ForgotPassword = () => {
           </div>
         </div>
 
-        {/* -------------------------------------------------------------------------------------------------------------------------------- */}
         <div className="fp-right-container">
           <header className="fp-right-header">
             {" "}
