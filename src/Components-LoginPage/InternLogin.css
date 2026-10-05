@@ -39,7 +39,6 @@
 
 .login-mainheader h3 {
   color: #ffffff;
-  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-style: Bold;
   font-size: 20px;
@@ -49,16 +48,21 @@
 }
 
 .login-mainheader p {
-  width: 197px;
+  width: auto;
   height: 16px;
   color: #ffffff;
-  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   font-style: SemiBold;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.3px;
   vertical-align: middle;
+}
+.login-mainheader p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
 }
 
 .login-middlecontent {
