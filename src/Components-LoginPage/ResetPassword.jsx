@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../Components-LoginPage/ResetPassword.css";
 import GraduateCap from "../assets/login/graduate-cap.png";
 import WhiteShield from "../assets/login/white-shield.png";
@@ -18,6 +18,7 @@ export const ResetPassword = () => {
 
   const [formValue, setFormValue] = useState(initialValue);
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   const isPasswordLengthValid = formValue.newPassword.length >= 8;
 
@@ -64,6 +65,8 @@ export const ResetPassword = () => {
 
     if (Object.keys(newError).length === 0) {
       alert("Password updated successfully");
+      setFormValue(initialValue);
+      navigate("/password-resetSucess");
     }
   };
 
@@ -78,7 +81,10 @@ export const ResetPassword = () => {
 
             <div className="ims-rp-main-header">
               <h3>Internship Management System</h3>
-              <p>Learn.Grow.Build Your Future</p>
+              <p>
+                Learn <span className="ims-rs-dot"></span> Grow{" "}
+                <span className="ims-rs-dot"></span> Build Your Future
+              </p>
             </div>
           </header>
 
@@ -149,7 +155,7 @@ export const ResetPassword = () => {
               <div className="ims-rp-input-wrapper">
                 <img
                   src={PasswordIcon}
-                  alt=""
+                  alt="Password Icon"
                   className="ims-rp-password-icon"
                 />
 
@@ -160,9 +166,16 @@ export const ResetPassword = () => {
                   placeholder="Min. 8 characters"
                   value={formValue.newPassword}
                   onChange={handleChange}
-                  className="ims-rp-input"
+                  className={
+                    errors.newPassword
+                      ? "ims-rp-input ims-rp-input-error"
+                      : "ims-rp-input"
+                  }
                 />
               </div>
+              {errors.newPassword && (
+                <p className="ims-rs-error-message">{errors.newPassword}</p>
+              )}
             </div>
 
             <div className="ims-rp-input-container">
@@ -178,16 +191,25 @@ export const ResetPassword = () => {
                   placeholder="Repeat your password"
                   value={formValue.confirmNewPassword}
                   onChange={handleChange}
-                  className="ims-rp-input"
+                  className={
+                    errors.confirmNewPassword
+                      ? "ims-rp-input ims-rp-input-error"
+                      : "ims-rp-input"
+                  }
                 />
               </div>
+              {errors.confirmNewPassword && (
+                <p className="ims-rs-error-message">
+                  {errors.confirmNewPassword}
+                </p>
+              )}
             </div>
 
             <div className="ims-rp-password-rules">
               <div className="ims-rp-rule">
                 <img
                   src={!isPasswordLengthValid ? Check : UnCheck}
-                  alt=""
+                  alt="Checker"
                   className="ims-rp-checker-icon"
                 />
 
@@ -197,7 +219,7 @@ export const ResetPassword = () => {
               <div className="ims-rp-rule">
                 <img
                   src={!isPasswordMatchValid ? Check : UnCheck}
-                  alt=""
+                  alt="Checker"
                   className="ims-rp-checker-icon"
                 />
 

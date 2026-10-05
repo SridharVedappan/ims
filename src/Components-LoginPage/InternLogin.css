@@ -156,7 +156,6 @@
   width: auto;
   height: 480px;
   padding-left: 110px;
-  mix-blend-mode: darken;
   margin: 50px 300px 20px 50px;
 }
 
@@ -538,7 +537,7 @@
   background: #132a563d;
 }
 
-.error-message {
+.ims-login-error-message {
   color: red;
   font-size: 12px;
   margin-top: 5px;
@@ -546,4 +545,12 @@
 
 .input-error {
   border: 1px solid red;
+}
+
+.ims-login-dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background-color: #ffffff;
 }

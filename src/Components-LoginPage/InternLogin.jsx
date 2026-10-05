@@ -69,7 +69,10 @@ export const InternLogin = () => {
             </div>
             <div className="login-mainheader">
               <h3>Internship Management System</h3>
-              <p>Learn.Grow.Build Your Future</p>
+              <p>
+                Learn <span className="ims-login-dot"></span> Grow{" "}
+                <span className="ims-login-dot"></span> Build Your Future
+              </p>
             </div>
           </header>
 
@@ -177,8 +180,6 @@ export const InternLogin = () => {
           </div>
         </div>
 
-        {/* -------------------------------------------------------------------------------------------------------------------------------- */}
-
         <div className="login-right-container">
           <form onSubmit={handleSubmit} className="login-form">
             <header className="login-right-header">
@@ -205,7 +206,7 @@ export const InternLogin = () => {
                   />
                 </div>
                 {errors.email && (
-                  <p className="error-message">{errors.email}</p>
+                  <p className="ims-login-error-message">{errors.email}</p>
                 )}
               </div>
 
@@ -247,7 +248,7 @@ export const InternLogin = () => {
                   </span>
                 </div>
                 {errors.password && (
-                  <p className="error-message">{errors.password}</p>
+                  <p className="ims-login-error-message">{errors.password}</p>
                 )}
               </div>
 

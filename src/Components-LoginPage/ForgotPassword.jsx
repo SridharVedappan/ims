@@ -17,7 +17,7 @@ export const ForgotPassword = () => {
 
   const handleSendCode = () => {
     alert("OTP sent successfully.");
-    navigate("/forgot-password-otp", {
+    navigate("/OTPforgetpassword", {
       state: {
         method: radio,
         value: radio === "email" ? "j**n@g***l.com" : "+91 9•••• 5678",
@@ -35,7 +35,10 @@ export const ForgotPassword = () => {
             </div>
             <div className="fp-main-header">
               <h3>Internship Management System</h3>
-              <p>Learn.Grow.Build Your Future</p>
+              <p>
+                Learn <span className="ims-fp-dot"></span> Grow{" "}
+                <span className="ims-fp-dot"></span> Build Your Future
+              </p>
             </div>
           </header>
 
