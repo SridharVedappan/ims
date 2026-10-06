@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Components-Loginpage/OTPforgetpassword.css";
+import "../Components-LoginPage/OTPforgetpassword.css";
 import GraduateCap from "../assets/login/graduate-cap.png";
 import Otpforgetmainimage from "../assets/login/Intern-verify-otp-illustration.png";
 import WhiteShield from "../assets/login/login-shield-with-checkmark.png";
@@ -10,6 +10,7 @@ import Secureforgetotp from "../assets/login/Secure-shield-black.png";
 
 export const OTPforgetpassword = () => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [errors, setErrors] = useState({});
   const inputRefs = useRef([]);
   const navigate = useNavigate();
 
@@ -34,13 +35,17 @@ export const OTPforgetpassword = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    let newErrors = {};
     const code = otp.join("");
 
     if (code.length !== 6) {
-      alert("Please enter the 6-digit verification code.");
-      return;
+      newErrors.otp = "Please enter the 6-digit verification code *";
     }
-    navigate("/reset-Password");
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      navigate("/reset-Password");
+    }
   };
 
   return (
@@ -134,9 +139,27 @@ export const OTPforgetpassword = () => {
                     onChange={(e) => handleChange(e.target.value, index)}
                     onKeyDown={(e) => handleKeyDown(e, index)}
                     aria-label={`OTP digit ${index + 1}`}
+                    className={
+                      errors.otp
+                        ? "ims-otp-inputs ims-input-error"
+                        : "ims-otp-inputs"
+                    }
                   />
                 ))}
               </div>
+
+              {errors.otp && (
+                <div
+                  style={{
+                    color: "red",
+                    fontSize: "12px",
+                    marginTop: "5px",
+                    marginBottom: "20px",
+                  }}
+                >
+                  {errors.otp}
+                </div>
+              )}
 
               <button type="submit" className="ims-otpforget-verifybtn">
                 Verify and Continue
@@ -146,7 +169,6 @@ export const OTPforgetpassword = () => {
                   style={{ width: "12px", height: "12px" }}
                 />
               </button>
-
               <div className="ims-otpforget-resend">
                 <span className="ims-otpforget-resend-span">
                   Didn't receive the code?

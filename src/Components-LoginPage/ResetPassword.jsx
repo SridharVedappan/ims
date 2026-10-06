@@ -43,28 +43,25 @@ export const ResetPassword = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
 
+    const passwordRegex =
+      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
     let newError = {};
 
     if (!formValue.newPassword.trim()) {
       newError.newPassword = "New password is required *";
+    } else if (!passwordRegex.test(formValue.newPassword.trim())) {
+      newError.newPassword =
+        "Password contains at least 1 ( upper character, Lower character, Special character, Number )";
     }
 
     if (!formValue.confirmNewPassword.trim()) {
       newError.confirmNewPassword = "Confirm password is required *";
     }
 
-    if (formValue.newPassword && !isPasswordLengthValid) {
-      newError.newPassword = "Password must be at least 8 characters *";
-    }
-
-    if (formValue.confirmNewPassword && !isPasswordMatchValid) {
-      newError.confirmNewPassword = "Passwords do not match *";
-    }
-
     setErrors(newError);
 
     if (Object.keys(newError).length === 0) {
-      alert("Password updated successfully");
       setFormValue(initialValue);
       navigate("/password-resetSucess");
     }
@@ -126,8 +123,8 @@ export const ResetPassword = () => {
                   </strong>
 
                   <p>
-                    Campus Identity & Access Management (IAM) Protocol
-                    <span> • Verified Institutional Security</span>
+                    Dr. Elena Vance &mdash; Dean of Experiential Education & IAM
+                    Security Lead
                   </p>
                 </div>
               </div>

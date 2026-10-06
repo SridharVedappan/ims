@@ -45,6 +45,10 @@ export const InternLogin = () => {
 
     if (!formValues.email.trim()) {
       newErrors.email = "Email is required *";
+    } else if (
+      !/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(formValues.email.trim())
+    ) {
+      newErrors.email = "Enter a valid email *";
     }
     if (!formValues.password.trim()) {
       newErrors.password = "Password is required *";
@@ -53,8 +57,8 @@ export const InternLogin = () => {
 
     // No errors move to next page
     if (Object.keys(newErrors).length === 0) {
-      alert("Login successful!");
       setFormValues(initialValue);
+      console.log("handleSubmit ran", formValues);
       navigate("/");
     }
   };
@@ -169,7 +173,7 @@ export const InternLogin = () => {
                     from 14 days to under 48 hours.”
                   </strong>
                   <p>
-                    Dr. Elena Vance —{" "}
+                    Dr. Elena Vance &mdash;{" "}
                     <span>
                       Dean of Experiential Education, Northeastern Consortium
                     </span>
@@ -181,7 +185,7 @@ export const InternLogin = () => {
         </div>
 
         <div className="login-right-container">
-          <form onSubmit={handleSubmit} className="login-form">
+          <form onSubmit={handleSubmit} className="login-form" noValidate>
             <header className="login-right-header">
               <h1>Welcome Back</h1>
               <p>Manage your career journey</p>

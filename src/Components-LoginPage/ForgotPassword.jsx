@@ -16,7 +16,6 @@ export const ForgotPassword = () => {
   const navigate = useNavigate();
 
   const handleSendCode = () => {
-    alert("OTP sent successfully.");
     navigate("/OTPforgetpassword", {
       state: {
         method: radio,
@@ -80,7 +79,7 @@ export const ForgotPassword = () => {
                   </strong>
                   <p>
                     Campus Identity & Access Management (IAM) Protocol
-                    <span> • Verified Institutional Security</span>
+                    <span> &#9679; Verified Institutional Security</span>
                   </p>
                 </div>
               </div>
