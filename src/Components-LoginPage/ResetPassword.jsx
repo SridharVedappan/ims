@@ -63,7 +63,7 @@ export const ResetPassword = () => {
 
     if (Object.keys(newError).length === 0) {
       setFormValue(initialValue);
-      navigate("/password-resetSucess");
+      navigate("/password-resetSuccess");
     }
   };
 

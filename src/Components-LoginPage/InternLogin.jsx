@@ -41,6 +41,9 @@ export const InternLogin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const passwordRegex =
+      /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
     let newErrors = {};
 
     if (!formValues.email.trim()) {
@@ -52,6 +55,9 @@ export const InternLogin = () => {
     }
     if (!formValues.password.trim()) {
       newErrors.password = "Password is required *";
+    } else if (!passwordRegex.test(formValues.password.trim())) {
+      newErrors.password =
+        "Password contains at least 1 ( upper character, Lower character, Special character, Number )";
     }
     setErrors(newErrors);
 
