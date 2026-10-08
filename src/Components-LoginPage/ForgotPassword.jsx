@@ -16,12 +16,7 @@ export const ForgotPassword = () => {
   const navigate = useNavigate();
 
   const handleSendCode = () => {
-    navigate("/OTPforgetpassword", {
-      state: {
-        method: radio,
-        value: radio === "email" ? "j**n@g***l.com" : "+91 9•••• 5678",
-      },
-    });
+    navigate("/OTPforgetpassword");
   };
 
   return (

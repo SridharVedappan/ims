@@ -91,7 +91,7 @@ export const PasswordResetSuccess = () => {
                 alt="Resetsucees security lock"
                 className="Ims-Resetsuccess-securitylock"
               />
-              <span>RECOVERY COMPLETED • 256-BIT ENCRYPTED</span>
+              <span>RECOVERY COMPLETED &#9679; 256-BIT ENCRYPTED</span>
             </div>
 
             <h1 className="Ims-Resetsuccess-title">

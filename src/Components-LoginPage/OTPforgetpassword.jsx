@@ -39,7 +39,8 @@ export const OTPforgetpassword = () => {
     const code = otp.join("");
 
     if (code.length !== 6) {
-      newErrors.otp = "Please enter the 6-digit verification code *";
+      newErrors.verificationCode =
+        "Please enter the 6-digit verification code *";
     }
     setErrors(newErrors);
 
@@ -138,9 +139,8 @@ export const OTPforgetpassword = () => {
                     value={digit}
                     onChange={(e) => handleChange(e.target.value, index)}
                     onKeyDown={(e) => handleKeyDown(e, index)}
-                    aria-label={`OTP digit ${index + 1}`}
                     className={
-                      errors.otp
+                      errors.verificationCode
                         ? "ims-otp-inputs ims-input-error"
                         : "ims-otp-inputs"
                     }
@@ -148,7 +148,7 @@ export const OTPforgetpassword = () => {
                 ))}
               </div>
 
-              {errors.otp && (
+              {errors.verificationCode && (
                 <div
                   style={{
                     color: "red",
@@ -157,7 +157,7 @@ export const OTPforgetpassword = () => {
                     marginBottom: "20px",
                   }}
                 >
-                  {errors.otp}
+                  {errors.verificationCode}
                 </div>
               )}
 
@@ -174,7 +174,7 @@ export const OTPforgetpassword = () => {
                   Didn't receive the code?
                 </span>
                 <button type="button">Resend</button>
-                <span>(in 00:55)</span>
+                <span>(in00:55)</span>
               </div>
             </form>
 
