@@ -74,7 +74,10 @@ export const ForgotPassword = () => {
                   </strong>
                   <p>
                     Campus Identity & Access Management (IAM) Protocol
-                    <span> &#9679; Verified Institutional Security</span>
+                    <span>
+                      {" "}
+                      <span>&#9679;</span> Verified Institutional Security
+                    </span>
                   </p>
                 </div>
               </div>

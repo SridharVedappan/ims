@@ -68,7 +68,10 @@ export const PasswordResetSuccess = () => {
 
                   <p>
                     Enterprise IAM & Security Operations
-                    <span> &mdash; Verified Institutional Security</span>
+                    <span>
+                      {" "}
+                      <span>&mdash; </span>Verified Institutional Security
+                    </span>
                   </p>
                 </div>
               </div>

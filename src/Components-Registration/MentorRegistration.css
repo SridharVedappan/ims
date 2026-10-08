@@ -1,0 +1,204 @@
+.ims-mentor-inner-container {
+  display: flex;
+  margin-top: 55px;
+  margin-left: 110px;
+  margin-right: 0;
+}
+
+.ims-mentor-left-section {
+  width: 690px;
+  height: auto;
+}
+
+.ims-mentor-inner-container {
+  width: 1010px;
+  height: auto;
+}
+.ims-mentor-header-conatiner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ims-mentor-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ims-mentor-header h1 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.8px;
+  color: #132a56;
+}
+
+.ims-mentor-header p {
+  height: auto;
+  width: 450px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #464555;
+}
+
+.mentor-role-selector label {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #132a56;
+}
+
+.mentor-role-selector span {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  color: #ef4444;
+}
+
+.mentor-role-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mentor-role-selector select {
+  width: 834px;
+  height: 55px;
+  border-radius: 10px;
+  border: 2px solid #132a5688;
+  padding: 15px 40px 15px 20px;
+  appearance: none;
+  background-image: url("../assets/login/drop-down-arrow.png");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 16px 8px;
+  background-color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  vertical-align: middle;
+  color: #6b7280;
+}
+
+.mentor-role-selector select option {
+  border-radius: 10px;
+  margin-top: 17px;
+}
+
+.ims-mentor-reg-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 19px;
+  gap: 20px;
+}
+
+.ims-mentor-form-row-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.mentor-input-conatiner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.mentor-input-conatiner label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.3px;
+  color: #132a56;
+}
+
+.mentor-input-conatiner span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.3px;
+  color: #ef4444;
+}
+
+.mentor-input-conatiner input {
+  width: 405.5px;
+  height: 50px;
+  border-radius: 8px;
+  border-width: 1px;
+  padding: 13px 16px 14px 16px;
+  border: 2px solid #132a5680;
+  background-color: #ffffff;
+}
+
+.mentor-input-conatiner input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: #777587;
+}
+
+.mentor-input-conatiner select {
+  padding: 10px;
+  appearance: none;
+  width: 47px;
+  height: 50px;
+  border-radius: 8px;
+  border-width: 2px;
+  font-family: Hanken Grotesk;
+  font-weight: 400;
+  font-size: 16px;
+  color: #111112;
+  border: 2px solid #132a5680;
+}
+
+.ims-mentor-phoneNumber-conatiner {
+  display: flex;
+  gap: 8px;
+}
+
+.ims-mentor-phoneNumber-conatiner input {
+  width: 350.5px;
+  height: 50px;
+  border-radius: 8px;
+  border-width: 1px;
+  padding: 13px 16px 14px 16px;
+  border: 2px solid #132a5680;
+}
+
+.ims-mentor-Experience select {
+  width: 405px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-width: 1px;
+  padding: 13px 16px 14px 16px;
+  border: 2px solid #132a5680;
+}
+
+.ims-mentor-Experience select {
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333334;
+}
+
+.mentor-input-conatiner p {
+  display: block;
+  font-family: Hanken Grotesk;
+  font-weight: 400;
+  font-size: 11px;
+  color: #333334;
+}
+
+.ims-mentor-Experience select {
+  background-image: url("../assets/login/grey-drop-down.png");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 9.6px 4.8px;
+  background-color: #ffffff;
+}
+
+.mentor-input-conatiner textarea {
+  appearance: none;
+}

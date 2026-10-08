@@ -179,7 +179,7 @@ export const InternLogin = () => {
                     from 14 days to under 48 hours.”
                   </strong>
                   <p>
-                    Dr. Elena Vance &mdash;{" "}
+                    Dr. Elena Vance <span>&mdash;</span>{" "}
                     <span>
                       Dean of Experiential Education, Northeastern Consortium
                     </span>
@@ -191,7 +191,7 @@ export const InternLogin = () => {
         </div>
 
         <div className="login-right-container">
-          <form onSubmit={handleSubmit} className="login-form" noValidate>
+          <form onSubmit={handleSubmit} className="login-form">
             <header className="login-right-header">
               <h1>Welcome Back</h1>
               <p>Manage your career journey</p>
