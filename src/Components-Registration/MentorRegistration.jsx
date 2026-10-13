@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./MentorRegistration.css";
-import GraduateCap from "../assets/login/graduate-cap.png";
-import MentorRegistermainimage from "../assets/login/Mentor register main image.png";
-import MentorRegisterWhiteShield from "../assets/login/Mentorregister insustryshield.png";
-import MentorRegisterconnections from "../assets/login/Mentor Register Connections.png";
-import MentorRegisterstars from "../assets/login/MentorRegister Stars.png";
-
-import EyeOpenIcon from "../assets/login/eye-open.png";
-import EyeCloseIcon from "../assets/login/eye-close.png";
+import MentorRegistermainimage from "../assets/registration/mentor-register-illustartion-image.png";
+import MentorRegisterWhiteShield from "../assets/registration/mentor-register-shield.png";
+import MentorRegisterconnections from "../assets/registration/mentor-register-connections.png";
+import MentorRegisterstars from "../assets/registration/mentor-register-stars.png";
+import EyeOpenIcon from "../assets/registration/eye-open.png";
+import EyeCloseIcon from "../assets/registration/eye-close.png";
+import { Header } from "../Reusable-Components/Header.jsx";
 
 export const MentorRegistration = () => {
   const initialValues = {
@@ -33,6 +32,27 @@ export const MentorRegistration = () => {
   const [passwordShow, setPasswordShow] = useState(false);
   const [confirmPasswordShow, setConfirmPasswordShow] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
+
+  const countryCodes = [
+    { code: "+91", country: "India" },
+    { code: "+1", country: "United States" },
+    { code: "+44", country: "United Kingdom" },
+    { code: "+61", country: "Australia" },
+    { code: "+971", country: "UAE" },
+    { code: "+43", country: "Austria" },
+    { code: "+55", country: "Brazil" },
+    { code: "+86", country: "China" },
+  ];
+
+  const experienceOptions = [
+    "0-1 year",
+    "1-3 years",
+    "3-5 years",
+    "5-8 years",
+    "8-12 years",
+    "12-15 years",
+    "15+ years",
+  ];
 
   const handleToggle = (field) => {
     if (field === "password") {
@@ -71,6 +91,7 @@ export const MentorRegistration = () => {
       /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
 
     let newErrors = {};
+
     if (!formValues.fullName.trim()) {
       newErrors.fullName = "Your full name is required*";
     }
@@ -78,7 +99,7 @@ export const MentorRegistration = () => {
     if (!formValues.email.trim()) {
       newErrors.email = "Email is required*";
     } else if (
-      !/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(formValues.email.trim())
+      !/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i.test(formValues.email.trim())
     ) {
       newErrors.email = "Enter a valid email*";
     }
@@ -110,9 +131,9 @@ export const MentorRegistration = () => {
 
     if (!formValues.password.trim()) {
       newErrors.password = "Password is required*";
-    } else if (!passwordRegex.test(formValues.password.trim())) {
+    } else if (!passwordRegex.test(formValues.password)) {
       newErrors.password =
-        "Password contains at least 1 ( upper character, Lower character, Special character)*";
+        "Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character (@$!%*?&).";
     }
 
     if (!formValues.confirmPassword.trim()) {
@@ -120,14 +141,15 @@ export const MentorRegistration = () => {
     } else if (!formValues.password.trim()) {
       newErrors.confirmPassword = "Please enter password first*";
     } else if (formValues.confirmPassword !== formValues.password) {
-      newErrors.confirmPassword = "Passwords do not match *";
+      newErrors.confirmPassword = "Passwords do not match*";
     }
 
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      setFormValues(initialValues);
       console.log("handleSubmit ran", formValues);
+      setFormValues(initialValues);
+      setTermsAccepted(false);
       navigate("/");
     }
   };
@@ -136,16 +158,7 @@ export const MentorRegistration = () => {
     <div className="ims-mentor-conatiner">
       <div className="ims-mentor-inner-container">
         <div className="ims-mentor-left-section">
-          <header className="Ims-MentorRegister-leftheader">
-            <div className="Ims-MentorRegister-logo-container">
-              <img src={GraduateCap} alt="Graduate-Cap" />
-            </div>
-            <div className="Ims-MentorRegister-main-header">
-              <h3>Internship Management System</h3>
-              <p>Learn • Grow • Build Your Future</p>
-            </div>
-          </header>
-
+          <Header />
           <div className="Ims-MentorRegister-middle-content">
             <div className="Ims-MentorRegister-main-content">
               <h2>
@@ -248,7 +261,11 @@ export const MentorRegistration = () => {
               <label>
                 Registering As <span>*</span>
               </label>
-              <select value={role} onChange={(e) => setRole(e.target.value)}>
+              <select
+                value={role}
+                onChange={(e) => setRole(e.target.value)}
+                className="ims-mentor-selector"
+              >
                 <option value="">Select role</option>
                 <option value="intern">Intern</option>
                 <option value="mentor">Mentor</option>
@@ -306,22 +323,20 @@ export const MentorRegistration = () => {
                     Phone Number<span>*</span>
                   </label>
                   <div className="ims-mentor-phoneNumber-conatiner">
-                    {" "}
                     <select
                       name="countryCode"
                       id="countryCode"
                       value={formValues.countryCode}
                       onChange={handleChange}
+                      className="ims-mentor-selector"
                     >
-                      <option value="+91">+91</option>
-                      <option value="+1">+1</option>
-                      <option value="+44">+44</option>
-                      <option value="+61">+61</option>
-                      <option value="+971">+971</option>
-                      <option value="+43">+43</option>
-                      <option value="+55">+55</option>
-                      <option value="+86">+86</option>
+                      {countryCodes.map((country) => (
+                        <option key={country.code} value={country.code}>
+                          {country.code}
+                        </option>
+                      ))}
                     </select>
+
                     <input
                       type="tel"
                       inputMode="numeric"
@@ -390,24 +405,25 @@ export const MentorRegistration = () => {
                   <label htmlFor="YearOfExperience">
                     Year of Experience<span>*</span>
                   </label>
+
                   <div className="ims-mentor-Experience">
                     <select
                       name="YearOfExperience"
                       id="YearOfExperience"
                       value={formValues.YearOfExperience}
                       onChange={handleChange}
+                      className="ims-mentor-selector"
                     >
-                      <option value="">Select the experience level</option>{" "}
-                      <option value="0-1 year">0-1 year</option>
-                      <option value="1-3 years">1-3 years </option>
-                      <option value="3-5 years">3-5 years </option>
-                      <option value="5-8 years">5-8 years</option>
-                      <option value="8-12 years">8-12 years</option>
-                      <option value="12-15 years">12-15 years </option>
-                      <option value="15+ years">15+ years</option>
+                      <option value="">Select the experience level</option>
+
+                      {experienceOptions.map((experience) => (
+                        <option key={experience} value={experience}>
+                          {experience}
+                        </option>
+                      ))}
                     </select>
                   </div>
-                </div>{" "}
+                </div>
                 {errors.YearOfExperience && (
                   <p className="ims-mentor-skill-error-message">
                     {errors.YearOfExperience}
@@ -418,10 +434,12 @@ export const MentorRegistration = () => {
 
             <div className="ims-mentor-input-outer-container">
               <div className="mentor-input-conatiner">
-                <label htmlFor="bio">
-                  Bio / About You<span>*</span>
-                </label>
-                <p>0/500</p>
+                <div className="ims-mentor-label-and-para-container">
+                  <label htmlFor="bio">
+                    Bio / About You<span>*</span>
+                  </label>
+                  <p>0/500</p>
+                </div>
 
                 <textarea
                   name="bio"
@@ -529,7 +547,9 @@ export const MentorRegistration = () => {
                 />{" "}
                 <label className="ims-mentor-checkbox-label">
                   I agree to the <span>Terms of Service</span> and{" "}
-                  <span>Privacy Policy</span>
+                  <span className="ims-mentor-checkbox-span">
+                    Privacy Policy
+                  </span>
                 </label>
               </div>
               <div className="ims-mentor-checkbox-error-conatiner">

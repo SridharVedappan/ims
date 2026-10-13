@@ -1,0 +1,25 @@
+.Ims-MentorRegister-leftheader {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+
+.Ims-MentorRegister-logo-container img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.Ims-MentorRegister-main-header h3 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 590;
+}
+
+.Ims-MentorRegister-main-header p {
+  width: 197px;
+  height: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 11px;
+}
