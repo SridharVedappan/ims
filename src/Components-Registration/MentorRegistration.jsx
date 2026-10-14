@@ -72,10 +72,29 @@ export const MentorRegistration = () => {
       [name]: value,
     }));
 
-    setErrors((prev) => ({
-      ...prev,
-      [name]: "",
-    }));
+    if (name === "bio") {
+      if (!value.trim()) {
+        setErrors((prev) => ({
+          ...prev,
+          bio: "Bio / About You is required",
+        }));
+      } else if (value.trim().length < 10) {
+        setErrors((prev) => ({
+          ...prev,
+          bio: "Bio must contain at least 10 characters",
+        }));
+      } else {
+        setErrors((prev) => ({
+          ...prev,
+          bio: "",
+        }));
+      }
+    } else {
+      setErrors((prev) => ({
+        ...prev,
+        [name]: "",
+      }));
+    }
   };
 
   const handleKeyDown = (e) => {
@@ -121,7 +140,11 @@ export const MentorRegistration = () => {
     }
 
     if (!formValues.bio.trim()) {
-      newErrors.bio = "Please enter your bio*";
+      newErrors.bio = "Bio / About You is required";
+    } else if (formValues.bio.trim().length < 10) {
+      newErrors.bio = "Bio must contain at least 10 characters";
+    } else if (formValues.bio.length > 500) {
+      newErrors.bio = "Bio cannot exceed 500 characters";
     }
 
     if (!termsAccepted) {
@@ -438,16 +461,17 @@ export const MentorRegistration = () => {
                   <label htmlFor="bio">
                     Bio / About You<span>*</span>
                   </label>
-                  <p>0/500</p>
+                  <p className="ims-mentor-character-count">
+                    {formValues.bio.length}/500
+                  </p>
                 </div>
 
                 <textarea
                   name="bio"
-                  id="bio"
-                  placeholder="Tell us about yourself, your background and why you're passionate about mentoring..."
                   value={formValues.bio}
                   onChange={handleChange}
-                ></textarea>
+                  placeholder="Tell us about yourself"
+                />
               </div>
               {errors.bio && (
                 <p className="ims-mentor-error-message">{errors.bio}</p>

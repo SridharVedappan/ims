@@ -23,3 +23,12 @@
   font-weight: 600;
   font-size: 11px;
 }
+.ims-reusable-header-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ims-reusable-header-dot {
+  color: #ffffff;
+}

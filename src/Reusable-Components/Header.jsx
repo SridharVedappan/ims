@@ -10,7 +10,11 @@ export const Header = () => {
       </div>
       <div className="Ims-MentorRegister-main-header">
         <h3>Internship Management System</h3>
-        <p>Learn • Grow • Build Your Future</p>
+        <p className="ims-reusable-header-subtitle">
+          Learn <span className="ims-reusable-header-dot">&bull;</span> Grow{" "}
+          <span className="ims-reusable-header-dot">&bull;</span> Build Your
+          Future
+        </p>
       </div>
     </header>
   );
