@@ -7,6 +7,7 @@ import { ResetPassword } from "./Components-LoginPage/ResetPassword.jsx";
 import { OTPforgetpassword } from "./Components-LoginPage/OTPforgetpassword.jsx";
 import { PasswordResetSuccess } from "./Components-LoginPage/PasswordResetSuccess.jsx";
 import { MentorRegistration } from "./Components-Registration/MentorRegistration.jsx";
+import { Welcome } from "./Components-Registration/Welcome.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/Mentor-Registeration",
     element: <MentorRegistration />,
+  },
+  {
+    path: "/welcome",
+    element: <Welcome />,
   },
 ]);
 
