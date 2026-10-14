@@ -567,13 +567,11 @@
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1599px) {
-  /* Form section */
   .ims-mentor-right-section {
     min-width: 0;
     box-sizing: border-box;
   }
 
-  /* Keep original heading and text sizes */
   .ims-mentor-header h1 {
     font-size: 26px;
     line-height: 34px;
@@ -583,7 +581,6 @@
     width: 100%;
   }
 
-  /* Reduce spacing, not text size */
   .ims-mentor-form-row-container {
     width: 100%;
     gap: 12px;
@@ -595,7 +592,6 @@
     min-width: 0;
   }
 
-  /* Keep input text at its original size */
   .mentor-role-selector select,
   .mentor-input-conatiner input,
   .mentor-input-conatiner select,
@@ -606,7 +602,6 @@
     box-sizing: border-box;
   }
 
-  /* Slightly reduce field height only */
   .mentor-role-selector select,
   .mentor-input-conatiner input,
   .mentor-input-conatiner select,
@@ -620,7 +615,6 @@
     min-height: 80px;
   }
 
-  /* Password fields */
   .ims-mentor-input-inner-container {
     width: 100%;
     min-width: 0;
@@ -633,7 +627,6 @@
     box-sizing: border-box;
   }
 
-  /* Phone number */
   .ims-mentor-phoneNumber-conatiner {
     width: 100%;
     min-width: 0;
@@ -650,20 +643,17 @@
     min-width: 0;
   }
 
-  /* Submit button */
   .ims-mentor-submit-btn {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
   }
 
-  /* OR divider */
   .ims-mentor-divider-container {
     width: 100%;
     gap: 12px;
   }
 
-  /* Center selected text inside dropdowns */
   .mentor-role-selector select,
   .mentor-input-conatiner select,
   .ims-mentor-Experience select,
@@ -671,7 +661,6 @@
     font-size: 14px;
   }
 
-  /* Center option text in dropdown list */
   .mentor-role-selector select option,
   .mentor-input-conatiner select option,
   .ims-mentor-Experience select option,
@@ -679,7 +668,6 @@
     font-size: 14px;
   }
 
-  /* Slightly reduce label size */
   .mentor-input-conatiner label,
   .mentor-role-selector label,
   .ims-mentor-Experience label {
@@ -688,7 +676,6 @@
     margin-bottom: -3px;
   }
 
-  /* Reduce input placeholder font size */
   .mentor-input-conatiner input::placeholder,
   .mentor-input-conatiner textarea::placeholder,
   .ims-mentor-input-inner-container input::placeholder {
@@ -701,41 +688,37 @@
     min-width: 0;
   }
 
-  /* Reduce password eye icon size */
   .ims-mentor-input-inner-container img {
     width: 16px;
     height: 16px;
     object-fit: contain;
   }
 
-  /* Checkbox container */
   .ims-mentor-terms-container {
     display: flex;
     align-items: flex-start;
     gap: 6px;
   }
 
-  /* Checkbox size */
-  .ims-mentor-terms-container input[type="checkbox"] {
-    width: 8px;
-    height: 8px;
-    flex-shrink: 0;
-  }
-
-  /* Checkbox label text */
   .ims-mentor-checkbox-label {
     font-size: 14px;
-    line-height: 17px;
   }
 
-  /* Text inside the label span */
-  .ims-mentor-checkbox-span {
-    font-size: 10px;
+  .ims-mentor-checkbox-label span {
+    font-size: 14px;
   }
-  /* Sign-in section */
+
   .ims-mentor-signin-container {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+  }
+
+  .ims-mentor-signin-text {
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    color: #777587;
+    text-align: center;
   }
 }

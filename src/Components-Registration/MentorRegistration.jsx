@@ -546,7 +546,11 @@ export const MentorRegistration = () => {
                   className="ims-mentor-checkbox"
                 />{" "}
                 <label className="ims-mentor-checkbox-label">
-                  I agree to the <span>Terms of Service</span> and{" "}
+                  I agree to the{" "}
+                  <span className="ims-mentor-checkbox-span">
+                    Terms of Service
+                  </span>{" "}
+                  and{" "}
                   <span className="ims-mentor-checkbox-span">
                     Privacy Policy
                   </span>
