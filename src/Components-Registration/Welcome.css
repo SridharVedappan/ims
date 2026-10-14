@@ -1,15 +1,13 @@
 .ims-welcome-container {
   display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   max-width: 1920px;
-  overflow: hidden;
+  margin: 0 auto;
   padding: 55px 80px;
   background: linear-gradient(270deg, #ffffff 35%, #566b93 93%);
 }
-
 .ims-welcome-inner-container {
   display: flex;
   width: 100%;
@@ -18,6 +16,7 @@
 
 .ims-welcome-left-section {
   display: flex;
+  flex-direction: column;
   width: 40%;
   height: auto;
 }
@@ -26,4 +25,328 @@
   display: flex;
   width: 60%;
   height: auto;
+  margin-left: 175px;
+}
+
+.ims-welcom-right-header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ims-welcome-header-title {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.ims-welcome-sub-header-title {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 28px;
+}
+
+.ims-welcome-illustration {
+  width: 535px;
+  height: auto;
+  padding-left: 77px;
+}
+
+.ims-welcome-bar-chart {
+  width: 18px;
+  height: 18px;
+  margin-top: 19px;
+  margin-left: 17px;
+}
+
+.ims-welcome-bottom-card {
+  display: flex;
+  flex-direction: row;
+  width: 580px;
+  height: 75px;
+  border-width: 1px;
+  border-radius: 16px;
+  border: 1px solid #ffffff1a;
+  background-color: #ffffffbf;
+  gap: 16px;
+  backdrop-filter: blur(4px);
+}
+
+.ims-welcome-sub-heading-title {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.7px;
+  color: #132a56;
+}
+
+.ims-welcome-discription {
+  font-weight: 400;
+  font-size: 14px;
+  color: #111112;
+}
+
+.ims-welcome-sub-headings-container {
+  margin-top: 19px;
+  margin-bottom: 51px;
+}
+
+.ims-welcome-verified-shield {
+  width: 22px;
+  height: 22px;
+  margin-top: 18px;
+  margin-left: 17px;
+}
+
+.ims-welcome-bottom-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ims-welcome-outer-bottom-container {
+  margin-left: 55px;
+}
+
+.ims-welcome-bottom-container {
+  width: 580px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top-width: 1px;
+  padding-top: 32px;
+  border-top: 1px solid #eae7e5;
+  margin-top: 48px;
+}
+
+.ims-welcome-image-and-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 13px;
+}
+
+.ims-welcome-profile-image {
+  width: 30px;
+  height: 30px;
+}
+
+.ims-welcome-profile-description {
+  font-weight: 600;
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.ims-welcome-bottom-para {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.ims-welcome-right-title {
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -0.8px;
+  color: #132a56;
+}
+
+.ims-welcome-right-sub-title {
+  font-weight: 400;
+  font-size: 14px;
+  color: #777587;
+}
+
+.ims-welcome-select-role-label {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.ims-welcome-asterisk {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #f44336;
+}
+
+.ims-welcome-selector {
+  width: 834px;
+  height: 55px;
+  gap: 123px;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 15px 20px 15px 20px;
+  border: 1px solid #132a5680;
+}
+
+.ims-welcome-right-inner-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 175px;
+  margin-top: 150px;
+  gap: 25px;
+}
+
+.ims-welcome-right-header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ims-welcome-role-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ims-welcome-selector {
+  font-weight: 400;
+  font-size: 16px;
+  color: #6b7280;
+  appearance: none;
+  background-image: url("../assets/registration/drop-down-arrow.png");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px 8px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1600px) and (min-height: 900px) {
+  .ims-welcome-container {
+    padding: 55px 80px;
+  }
+
+  .ims-welcome-right-inner-container {
+    margin-left: 175px;
+    margin-top: 150px;
+  }
+
+  .ims-welcome-illustration {
+    width: 535px;
+  }
+
+  .ims-welcome-bottom-card,
+  .ims-welcome-bottom-container {
+    width: 580px;
+  }
+
+  .ims-welcome-selector {
+    width: 834px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1599px) {
+  .ims-welcome-container {
+    padding: 45px 60px;
+  }
+
+  .ims-welcome-inner-container {
+    width: 100%;
+  }
+
+  .ims-welcome-left-section {
+    width: 40%;
+  }
+
+  .ims-welcome-right-inner-container {
+    margin-left: 175px;
+    margin-top: 100px;
+    gap: 20px;
+  }
+
+  .ims-welcome-header-title {
+    font-size: 36px;
+  }
+
+  .ims-welcome-sub-header-title {
+    font-size: 13px;
+    line-height: 25px;
+  }
+
+  .ims-welcome-illustration {
+    height: auto;
+    padding-left: 77px;
+    width: 535px;
+    padding-top: 30px;
+    padding-left: 77px;
+  }
+
+  .ims-welcome-bottom-card {
+    display: flex;
+    flex-direction: row;
+    width: 522px;
+    height: 65px;
+    border-width: 1px;
+    border-radius: 16px;
+    border: 1px solid #ffffff1a;
+    background-color: #ffffffbf;
+    gap: 16px;
+    backdrop-filter: blur(4px);
+  }
+
+  .ims-welcome-bottom-container {
+    width: 90%;
+    margin-top: 35px;
+    padding-top: 25px;
+  }
+
+  .ims-welcome-bottom-cards-container {
+    gap: 18px;
+  }
+
+  .ims-welcome-right-title {
+    font-size: 29px;
+  }
+
+  .ims-welcome-right-sub-title {
+    font-size: 13px;
+  }
+
+  .ims-welcome-selector {
+    background-size: 12px 6px;
+    width: 640px;
+    height: 47px;
+    padding: 14px 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  .ims-welcome-right-header-container {
+    gap: 5px;
+  }
+
+  .ims-welcome-role-selector {
+    gap: 7px;
+  }
+  .ims-welcome-sub-heading-title {
+    font-size: 12px;
+  }
+  .ims-welcome-discription {
+    font-size: 12px;
+  }
+  .ims-welcome-verified-shield {
+    width: 19px;
+    height: 19px;
+    margin-top: 21px;
+    margin-left: 15px;
+  }
+
+  .ims-welcome-bar-chart {
+    width: 15px;
+    height: 15px;
+    margin-top: 22px;
+    margin-left: 15px;
+  }
+
+  .ims-welcome-outer-bottom-container {
+    width: 580px;
+  }
+
+  .ims-welcome-right-section {
+    display: flex;
+    width: 60%;
+    height: auto;
+    margin-left: 25px;
+  }
 }
