@@ -54,12 +54,12 @@ export const MentorRegistration = () => {
     "15+ years",
   ];
 
-  const handleToggle = (field) => {
-    if (field === "password") {
+  const handleToggle = (type) => {
+    if (type === "password") {
       setPasswordShow((prev) => !prev);
-    } else if (field === "confirmPassword") {
+    } else if (type === "confirmPassword") {
       setConfirmPasswordShow((prev) => !prev);
-    } else if (field === "termsAccepted") {
+    } else if (type === "termsAccepted") {
       setTermsAccepted((prev) => !prev);
     }
   };

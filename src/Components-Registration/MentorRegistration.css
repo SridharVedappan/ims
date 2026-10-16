@@ -31,43 +31,6 @@
   gap: 14px;
 }
 
-.Ims-MentorRegister-logo-container {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background: #176789;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Ims-MentorRegister-main-head {
-  display: flex;
-  gap: 14px;
-}
-
-.Ims-MentorRegister-logo-container img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-
-.Ims-MentorRegister-main-header h3 {
-  color: #ffffff;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 590;
-  font-style: Bold;
-  font-size: 18px;
-}
-
-.Ims-MentorRegister-main-header p {
-  width: 197px;
-  height: 16px;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 11px;
-}
-
 .Ims-MentorRegister-middle-content {
   display: grid;
   gap: 35px;
@@ -126,6 +89,7 @@
 .Ims-MentorRegister-bottomcard {
   border: 1px solid #ffffffcc;
   width: 600px;
+
   height: 60px;
   box-shadow: 0px 1px 2px 0px #0000000d;
   backdrop-filter: blur(12px);
@@ -134,6 +98,7 @@
   display: flex;
   padding-left: 17px;
   gap: 10px;
+
   align-items: center;
 }
 
@@ -774,5 +739,404 @@
     font-size: 14px;
     color: #777587;
     text-align: center;
+  }
+}
+
+/* Tablet Responsive Design */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Main container */
+  .ims-mentor-conatiner {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: 30px 50px;
+    box-sizing: border-box;
+  }
+
+  .ims-mentor-inner-container {
+    width: 100%;
+    gap: 29px;
+  }
+
+  /* Left and right sections */
+  .ims-mentor-left-section,
+  .ims-mentor-right-section {
+    width: calc(50% - 12px);
+    min-width: 0;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+
+  /* Left content */
+  .Ims-MentorRegister-leftcontent,
+  .Ims-MentorRegister-image-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .Ims-MentorRegister-main-content h2 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .Ims-MentorRegister-main-content p {
+    width: 100%;
+    height: auto;
+    font-size: 11px;
+    line-height: 18px;
+  }
+
+  .Ims-MentorRegister-vector-stock {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding-left: 0;
+    margin: 0 auto 20px;
+    box-sizing: border-box;
+    object-fit: contain;
+  }
+
+  .Ims-MentorRegister-bottomcard-container,
+  .Ims-MentorRegister-bottomcardtwo-container,
+  .Ims-MentorRegister-bottomcardthree-container {
+    width: 90%;
+    margin-left: 0;
+    margin-top: 12px;
+    box-sizing: border-box;
+  }
+
+  .Ims-MentorRegister-bottomcard {
+    width: 100%;
+    height: 40px;
+    min-height: 60px;
+    padding: 10px;
+    gap: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  .Ims-MentorRegister-bottomcontent {
+    min-width: 0;
+  }
+
+  .Ims-MentorRegister-bottomcontent strong {
+    font-size: 9.6px;
+  }
+
+  .Ims-MentorRegister-bottomcontent p {
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  /* Right section heading */
+  .ims-mentor-header h1 {
+    font-size: 17px;
+    line-height: 15px;
+  }
+
+  .ims-mentor-header p {
+    width: 100%;
+    font-size: 9.2px;
+    line-height: 18px;
+  }
+
+  /* Role selector */
+  .mentor-role-selector {
+    width: 90%;
+    min-width: 0;
+  }
+
+  .mentor-role-selector label {
+    font-size: 9.2px;
+  }
+
+  .mentor-role-selector span {
+    font-size: 9.2px;
+    font-weight: 700;
+    color: #ef4444;
+  }
+
+  .mentor-role-selector select {
+    width: 100%;
+    height: 32px;
+    padding: 8px 30px 8px 12px;
+    box-sizing: border-box;
+    font-size: 9.2px;
+    border-radius: 5px;
+    appearance: none;
+    background-image: url("../assets/registration/drop-down-arrow.png");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 9px 5px;
+    background-color: #ffffff;
+    color: #6b7280;
+  }
+
+  /* Form layout */
+  .ims-mentor-reg-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 14px;
+    gap: 12px;
+  }
+
+  .ims-mentor-form-row-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .ims-mentor-form-row-container > .mentor-input-conatiner,
+  .ims-mentor-form-row-container > .ims-mentor-input-outer-container {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+  }
+
+  .mentor-input-conatiner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    gap: 1px;
+  }
+
+  .mentor-input-conatiner label {
+    font-size: 9.1px;
+  }
+
+  .mentor-input-conatiner span {
+    font-size: 9.1px;
+  }
+
+  /* Input fields */
+  .mentor-input-conatiner input,
+  .ims-mentor-Experience select {
+    width: 100%;
+    min-width: 0;
+    height: 32px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 9.2px;
+  }
+
+  .mentor-input-conatiner input::placeholder {
+    font-size: 9.2px;
+  }
+
+  /* Phone number */
+  .ims-mentor-phoneNumber-conatiner {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    gap: 6px;
+  }
+
+  .ims-mentor-phoneNumber-conatiner select {
+    flex: 0 0 32px;
+    width: 32px;
+    min-width: 0;
+    height: 32px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 9.2px;
+  }
+
+  .ims-mentor-phoneNumber-conatiner input {
+    flex: 1;
+    width: 0;
+    min-width: 0;
+    height: 32px;
+    padding: 8px;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  /* Password fields */
+  .ims-mentor-input-inner-container {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: 32px;
+
+    box-sizing: border-box;
+  }
+
+  .ims-mentor-input-inner-container input {
+    width: 100%;
+    min-width: 0;
+    height: 32px;
+    padding: 8px 35px 8px 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+
+  .ims-mentor-form-row-container {
+    width: 90%;
+    gap: 10px;
+  }
+
+  .ims-mentor-password-eye-open,
+  .ims-mentor-password-eye-close {
+    width: 11px;
+    height: auto;
+  }
+
+  /* Bio textarea */
+  .mentor-input-conatiner textarea {
+    width: 90%;
+    min-width: 0;
+    height: 60px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+
+  .mentor-input-conatiner textarea::placeholder {
+    font-size: 9.2px;
+    font-weight: 100;
+    line-height: 14px;
+  }
+
+  /* Character count */
+  .ims-mentor-label-container {
+    width: 90%;
+  }
+
+  .ims-mentor-label-container p {
+    font-size: 9.1px;
+  }
+
+  /* Terms and conditions */
+  .ims-mentor-checkbox-inner-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    width: 90%;
+  }
+
+  .ims-mentor-checkbox {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+  .ims-mentor-checkbox-label,
+  .ims-mentor-checkbox-label span {
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  /* Submit button */
+  .ims-mentor-submit-btn {
+    width: 90%;
+    height: 32px;
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+
+  /* OR divider */
+  .ims-mentor-divider-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .ims-mentor-divider {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Sign in */
+  .ims-mentor-signin-container {
+    width: 90%;
+    padding-bottom: 18px;
+  }
+
+  .ims-mentor-signin-text,
+  .ims-mentor-signin-link {
+    font-size: 9.2px;
+  }
+
+  /* Bottom cards */
+  .Ims-MentorRegister-bottomrightcard {
+    flex-shrink: 0;
+    border: 1px solid #132a56;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #132a56;
+    box-shadow: 0 2px 4px 0 #0000000d inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Ims-MentorRegister-whiteshield {
+    width: 8px;
+    height: 10px;
+  }
+  .ims-mentor-label-and-para-container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .mentor-input-conatiner p {
+    font-size: 8px;
+  }
+  .ims-mentor-header-conatiner {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .mentor-role-selector label {
+    font-weight: 700;
+    font-size: 8.9px;
+    text-transform: uppercase;
+    color: #132a56;
+  }
+
+  .mentor-role-selector span {
+    font-weight: 700;
+    font-size: 9.2px;
+    color: #ef4444;
+  }
+  .mentor-role-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .ims-mentor-checkbox-label span {
+    font-size: 9.2px;
+  }
+  .ims-mentor-divider-container span {
+    font-size: 9.2px;
+  }
+  .ims-mentor-Experience select {
+    background-position: right 15px center;
+    background-size: 7px 4px;
+    background-color: #ffffff;
+  }
+  .ims-mentor-error-message {
+    color: red;
+    font-size: 9.1px;
+    margin-top: 5px;
+  }
+  .ims-mentor-skill-error-message {
+    color: red;
+    font-size: 9.1px;
+    margin-top: 5px;
+  }
+
+  .ims-mentor-character-limit {
+    color: red;
   }
 }
