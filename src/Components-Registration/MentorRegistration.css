@@ -38,7 +38,6 @@
 .Ims-MentorRegister-main-content h2 {
   color: #ffffff;
   font-weight: 700;
-  font-style: Bold;
   font-size: 34px;
   margin-top: 25px;
 }
@@ -89,7 +88,6 @@
 .Ims-MentorRegister-bottomcard {
   border: 1px solid #ffffffcc;
   width: 600px;
-
   height: 60px;
   box-shadow: 0px 1px 2px 0px #0000000d;
   backdrop-filter: blur(12px);
@@ -98,7 +96,6 @@
   display: flex;
   padding-left: 17px;
   gap: 10px;
-
   align-items: center;
 }
 
@@ -167,51 +164,10 @@
   color: #464555;
 }
 
-.mentor-role-selector label {
-  font-weight: 700;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #132a56;
-}
-
-.mentor-role-selector span {
-  font-weight: 700;
-  font-size: 12px;
-  color: #ef4444;
-}
-
-.mentor-role-selector {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.mentor-role-selector select {
-  width: 834px;
-  height: 55px;
-  border-radius: 10px;
-  border: 1px solid #132a5688;
-  padding: 15px 40px 15px 20px;
-  appearance: none;
-  background-image: url("../assets/registration/drop-down-arrow.png");
-  background-repeat: no-repeat;
-  background-position: right 20px center;
-  background-size: 16px 8px;
-  background-color: #ffffff;
-  font-weight: 400;
-  font-size: 16px;
-  color: #6b7280;
-}
-
 .ims-mentor-label-and-para-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.mentor-role-selector select option {
-  border-radius: 10px;
-  margin-top: 17px;
 }
 
 .ims-mentor-reg-form {
@@ -315,7 +271,7 @@
 }
 
 .ims-mentor-Experience select {
-  background-image: url("../assets/registration/grey-drop-down.png");
+  background-image: url("../assets/registration/mentor/grey-drop-down.png");
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 9.6px 4.8px;
@@ -384,10 +340,12 @@
   border-width: 1px;
   border: 1px solid #132a5680;
 }
+
 .ims-mentor-checkbox-container {
   display: flex;
   flex-direction: column;
 }
+
 .ims-mentor-checkbox-inner-container {
   display: flex;
   gap: 12px;
@@ -529,14 +487,6 @@
     box-sizing: border-box;
   }
 
-  .mentor-role-selector select,
-  .mentor-input-conatiner textarea,
-  .ims-mentor-submit-btn,
-  .ims-mentor-signin-container {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
   .Ims-MentorRegister-bottomcontent p {
     font-size: 12px;
   }
@@ -544,6 +494,7 @@
   .Ims-MentorRegister-bottomcard {
     width: 580px;
   }
+
   .mentor-input-conatiner input,
   .ims-mentor-input-inner-container,
   .ims-mentor-Experience select {
@@ -611,7 +562,6 @@
     min-width: 0;
   }
 
-  .mentor-role-selector select,
   .mentor-input-conatiner input,
   .mentor-input-conatiner select,
   .mentor-input-conatiner textarea,
@@ -621,7 +571,6 @@
     box-sizing: border-box;
   }
 
-  .mentor-role-selector select,
   .mentor-input-conatiner input,
   .mentor-input-conatiner select,
   .ims-mentor-Experience select,
@@ -673,14 +622,12 @@
     gap: 12px;
   }
 
-  .mentor-role-selector select,
   .mentor-input-conatiner select,
   .ims-mentor-Experience select,
   .ims-mentor-phoneNumber-conatiner select {
     font-size: 14px;
   }
 
-  .mentor-role-selector select option,
   .mentor-input-conatiner select option,
   .ims-mentor-Experience select option,
   .ims-mentor-phoneNumber-conatiner select option {
@@ -688,7 +635,6 @@
   }
 
   .mentor-input-conatiner label,
-  .mentor-role-selector label,
   .ims-mentor-Experience label {
     font-size: 13px;
     margin-bottom: 3px;
@@ -742,9 +688,8 @@
   }
 }
 
-/* Tablet Responsive Design */
+/* tablet screen */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Main container */
   .ims-mentor-conatiner {
     width: 100%;
     min-height: 100vh;
@@ -758,7 +703,6 @@
     gap: 29px;
   }
 
-  /* Left and right sections */
   .ims-mentor-left-section,
   .ims-mentor-right-section {
     width: calc(50% - 12px);
@@ -767,7 +711,6 @@
     box-sizing: border-box;
   }
 
-  /* Left content */
   .Ims-MentorRegister-leftcontent,
   .Ims-MentorRegister-image-content {
     width: 100%;
@@ -828,7 +771,6 @@
     line-height: 11px;
   }
 
-  /* Right section heading */
   .ims-mentor-header h1 {
     font-size: 17px;
     line-height: 15px;
@@ -840,39 +782,6 @@
     line-height: 18px;
   }
 
-  /* Role selector */
-  .mentor-role-selector {
-    width: 90%;
-    min-width: 0;
-  }
-
-  .mentor-role-selector label {
-    font-size: 9.2px;
-  }
-
-  .mentor-role-selector span {
-    font-size: 9.2px;
-    font-weight: 700;
-    color: #ef4444;
-  }
-
-  .mentor-role-selector select {
-    width: 100%;
-    height: 32px;
-    padding: 8px 30px 8px 12px;
-    box-sizing: border-box;
-    font-size: 9.2px;
-    border-radius: 5px;
-    appearance: none;
-    background-image: url("../assets/registration/drop-down-arrow.png");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 9px 5px;
-    background-color: #ffffff;
-    color: #6b7280;
-  }
-
-  /* Form layout */
   .ims-mentor-reg-form {
     display: flex;
     flex-direction: column;
@@ -911,7 +820,6 @@
     font-size: 9.1px;
   }
 
-  /* Input fields */
   .mentor-input-conatiner input,
   .ims-mentor-Experience select {
     width: 100%;
@@ -927,7 +835,6 @@
     font-size: 9.2px;
   }
 
-  /* Phone number */
   .ims-mentor-phoneNumber-conatiner {
     display: flex;
     width: 100%;
@@ -956,13 +863,11 @@
     box-sizing: border-box;
   }
 
-  /* Password fields */
   .ims-mentor-input-inner-container {
     position: relative;
     width: 100%;
     min-width: 0;
     height: 32px;
-
     box-sizing: border-box;
   }
 
@@ -987,7 +892,6 @@
     height: auto;
   }
 
-  /* Bio textarea */
   .mentor-input-conatiner textarea {
     width: 90%;
     min-width: 0;
@@ -1003,7 +907,6 @@
     line-height: 14px;
   }
 
-  /* Character count */
   .ims-mentor-label-container {
     width: 90%;
   }
@@ -1012,7 +915,6 @@
     font-size: 9.1px;
   }
 
-  /* Terms and conditions */
   .ims-mentor-checkbox-inner-container {
     display: flex;
     align-items: flex-start;
@@ -1032,7 +934,6 @@
     line-height: 15px;
   }
 
-  /* Submit button */
   .ims-mentor-submit-btn {
     width: 90%;
     height: 32px;
@@ -1040,7 +941,6 @@
     font-size: 10px;
   }
 
-  /* OR divider */
   .ims-mentor-divider-container {
     display: flex;
     align-items: center;
@@ -1054,7 +954,6 @@
     min-width: 0;
   }
 
-  /* Sign in */
   .ims-mentor-signin-container {
     width: 90%;
     padding-bottom: 18px;
@@ -1065,7 +964,6 @@
     font-size: 9.2px;
   }
 
-  /* Bottom cards */
   .Ims-MentorRegister-bottomrightcard {
     flex-shrink: 0;
     border: 1px solid #132a56;
@@ -1097,23 +995,7 @@
     flex-direction: column;
     gap: 9px;
   }
-  .mentor-role-selector label {
-    font-weight: 700;
-    font-size: 8.9px;
-    text-transform: uppercase;
-    color: #132a56;
-  }
 
-  .mentor-role-selector span {
-    font-weight: 700;
-    font-size: 9.2px;
-    color: #ef4444;
-  }
-  .mentor-role-selector {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
   .ims-mentor-checkbox-label span {
     font-size: 9.2px;
   }

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { RoleSelector } from "../Reusable-Components/RoleSelector";
 import { Link, useNavigate } from "react-router-dom";
 import "./MentorRegistration.css";
-import MentorRegistermainimage from "../assets/registration/mentor-register-illustartion-image.png";
-import MentorRegisterWhiteShield from "../assets/registration/mentor-register-shield.png";
-import MentorRegisterconnections from "../assets/registration/mentor-register-connections.png";
-import MentorRegisterstars from "../assets/registration/mentor-register-stars.png";
-import EyeOpenIcon from "../assets/registration/eye-open.png";
-import EyeCloseIcon from "../assets/registration/eye-close.png";
+import MentorRegistermainimage from "../assets/registration/mentor/mentor-register-illustartion-image.png";
+import MentorRegisterWhiteShield from "../assets/registration/mentor/mentor-register-shield.png";
+import MentorRegisterconnections from "../assets/registration/mentor/mentor-register-connections.png";
+import MentorRegisterstars from "../assets/registration/mentor/mentor-register-stars.png";
+import EyeOpenIcon from "../assets/registration/mentor/eye-open.png";
+import EyeCloseIcon from "../assets/registration/mentor/eye-close.png";
 import { Header } from "../Reusable-Components/Header.jsx";
 
 export const MentorRegistration = () => {
@@ -26,7 +27,10 @@ export const MentorRegistration = () => {
 
   const navigate = useNavigate();
 
-  const [role, setRole] = useState("");
+  const [selectRole, setSelectRole] = useState(
+    location.state?.RoleSelector || "mentor",
+  );
+
   const [formValues, setFormValues] = useState(initialValues);
   const [errors, setErrors] = useState({});
   const [passwordShow, setPasswordShow] = useState(false);
@@ -111,10 +115,12 @@ export const MentorRegistration = () => {
 
     let newErrors = {};
 
+    // fullName
     if (!formValues.fullName.trim()) {
       newErrors.fullName = "Your full name is required*";
     }
 
+    // email
     if (!formValues.email.trim()) {
       newErrors.email = "Email is required*";
     } else if (
@@ -122,23 +128,26 @@ export const MentorRegistration = () => {
     ) {
       newErrors.email = "Enter a valid email*";
     }
-
+    // phoneNumber
     if (!formValues.phoneNumber.trim()) {
       newErrors.phoneNumber = "Phone number is required*";
     }
-
+    // skills
     if (!formValues.skills.trim()) {
       newErrors.skills = "Skills / Expertise is required*";
     }
 
+    // professional Title
     if (!formValues.professionalTitle.trim()) {
       newErrors.professionalTitle = "Professional title is required*";
     }
 
+    // Year Of Experience
     if (!formValues.YearOfExperience) {
       newErrors.YearOfExperience = "Please select your experience*";
     }
 
+    // Bio
     if (!formValues.bio.trim()) {
       newErrors.bio = "Bio / About You is required";
     } else if (formValues.bio.trim().length < 10) {
@@ -147,11 +156,12 @@ export const MentorRegistration = () => {
       newErrors.bio = "Bio cannot exceed 500 characters";
     }
 
+    // termsAccepted
     if (!termsAccepted) {
       newErrors.termsAccepted =
         "Please accept the Terms of Service and Privacy Policy*";
     }
-
+    // password
     if (!formValues.password.trim()) {
       newErrors.password = "Password is required*";
     } else if (!passwordRegex.test(formValues.password)) {
@@ -159,6 +169,7 @@ export const MentorRegistration = () => {
         "Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number, and one special character (@$!%*?&).";
     }
 
+    // confirmPassword
     if (!formValues.confirmPassword.trim()) {
       newErrors.confirmPassword = "Confirm password is required*";
     } else if (!formValues.password.trim()) {
@@ -280,23 +291,8 @@ export const MentorRegistration = () => {
               <h1>Create your account</h1>
               <p>Complete your profile to start connecting with students.</p>
             </header>
-            <div className="mentor-role-selector">
-              <label>
-                Registering As <span>*</span>
-              </label>
-              <select
-                value={role}
-                onChange={(e) => setRole(e.target.value)}
-                className="ims-mentor-selector"
-              >
-                <option value="">Select role</option>
-                <option value="intern">Intern</option>
-                <option value="mentor">Mentor</option>
-                <option value="hr">HR</option>
-                <option value="company">Company</option>
-                <option value="admin">Admin</option>
-              </select>
-            </div>
+
+            <RoleSelector selectRole={selectRole} onChange={setSelectRole} />
           </div>
           <form onSubmit={handleSubmit} className="ims-mentor-reg-form">
             <div className="ims-mentor-form-row-container">
@@ -309,6 +305,7 @@ export const MentorRegistration = () => {
                     type="text"
                     name="fullName"
                     id="fullName"
+                    autoComplete="name"
                     placeholder="Enter your full name"
                     value={formValues.fullName}
                     onChange={handleChange}
@@ -328,6 +325,7 @@ export const MentorRegistration = () => {
                     type="text"
                     name="email"
                     id="email"
+                    autoComplete="email"
                     placeholder="Enter your email address"
                     value={formValues.email}
                     onChange={handleChange}
@@ -365,6 +363,7 @@ export const MentorRegistration = () => {
                       inputMode="numeric"
                       name="phoneNumber"
                       id="phoneNumber"
+                      autoComplete="tel"
                       onKeyDown={handleKeyDown}
                       placeholder="Enter your number"
                       value={formValues.phoneNumber}
@@ -468,6 +467,7 @@ export const MentorRegistration = () => {
 
                 <textarea
                   name="bio"
+                  id="bio"
                   value={formValues.bio}
                   onChange={handleChange}
                   placeholder="Tell us about yourself"
@@ -490,6 +490,7 @@ export const MentorRegistration = () => {
                       type={passwordShow ? "text" : "password"}
                       name="password"
                       id="password"
+                      autoComplete="new-password"
                       placeholder="Create a strong password"
                       value={formValues.password}
                       onChange={handleChange}
@@ -527,6 +528,7 @@ export const MentorRegistration = () => {
                       type={confirmPasswordShow ? "text" : "password"}
                       name="confirmPassword"
                       id="confirmPassword"
+                      autoComplete="new-password"
                       placeholder="Confirm your password"
                       value={formValues.confirmPassword}
                       onChange={handleChange}
@@ -562,14 +564,19 @@ export const MentorRegistration = () => {
             <div className="ims-mentor-checkbox-container">
               <div className="ims-mentor-checkbox-inner-container">
                 <input
+                  name="checkbox"
                   type="checkbox"
+                  id="termsAccepted"
                   checked={termsAccepted}
                   onChange={() => {
                     handleToggle("termsAccepted");
                   }}
                   className="ims-mentor-checkbox"
                 />{" "}
-                <label className="ims-mentor-checkbox-label">
+                <label
+                  htmlFor="termsAccepted"
+                  className="ims-mentor-checkbox-label"
+                >
                   I agree to the{" "}
                   <span className="ims-mentor-checkbox-span">
                     Terms of Service
@@ -596,7 +603,7 @@ export const MentorRegistration = () => {
 
           <div className="ims-mentor-divider-container">
             <hr className="ims-mentor-divider" />
-            <span>OR</span>
+            <span className="ims-mentor-or">OR</span>
             <hr className="ims-mentor-divider" />
           </div>
 

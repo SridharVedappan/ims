@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   max-width: 1920px;
-  margin: 0 auto;
+  /* overflow: hidden; */
   padding: 55px 80px;
   background: linear-gradient(270deg, #ffffff 35%, #566b93 93%);
 }
@@ -74,7 +74,6 @@
 .ims-welcome-sub-heading-title {
   font-weight: 600;
   font-size: 14px;
-  letter-spacing: 0.7px;
   color: #132a56;
 }
 
@@ -136,6 +135,12 @@
   color: #ffffff;
 }
 
+.ims-welcome-dash {
+  font-weight: 600;
+  font-size: 8px;
+  color: #ffffff;
+}
+
 .ims-welcome-bottom-para {
   font-weight: 400;
   font-style: italic;
@@ -170,20 +175,13 @@
   color: #f44336;
 }
 
-.ims-welcome-selector {
-  width: 834px;
-  height: 55px;
-  gap: 123px;
-  border-width: 1px;
-  border-radius: 10px;
-  padding: 15px 20px 15px 20px;
-  border: 1px solid #132a5680;
-}
-
 .ims-welcome-right-inner-container {
   display: flex;
   flex-direction: column;
-  margin-left: 175px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin-left: 0;
   margin-top: 150px;
   gap: 25px;
 }
@@ -192,24 +190,6 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-}
-
-.ims-welcome-role-selector {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.ims-welcome-selector {
-  font-weight: 400;
-  font-size: 16px;
-  color: #6b7280;
-  appearance: none;
-  background-image: url("../assets/registration/drop-down-arrow.png");
-  background-repeat: no-repeat;
-  background-position: right 15px center;
-  background-size: 16px 8px;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 1600px) and (min-height: 900px) {
@@ -229,10 +209,6 @@
   .ims-welcome-bottom-card,
   .ims-welcome-bottom-container {
     width: 580px;
-  }
-
-  .ims-welcome-selector {
-    width: 834px;
   }
 }
 
@@ -303,22 +279,10 @@
     font-size: 13px;
   }
 
-  .ims-welcome-selector {
-    background-size: 12px 6px;
-    width: 640px;
-    height: 47px;
-    padding: 14px 20px;
-    font-size: 14px;
-    box-sizing: border-box;
-  }
-
   .ims-welcome-right-header-container {
     gap: 5px;
   }
 
-  .ims-welcome-role-selector {
-    gap: 7px;
-  }
   .ims-welcome-sub-heading-title {
     font-size: 12px;
   }
@@ -348,5 +312,213 @@
     width: 60%;
     height: auto;
     margin-left: 25px;
+  }
+}
+
+/* tablet screen */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .ims-welcome-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 35px 50px;
+    background: linear-gradient(270deg, #ffffff 35%, #566b93 93%);
+  }
+
+  .ims-welcome-inner-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+
+  .ims-welcome-left-section {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: auto;
+  }
+
+  .ims-welcome-right-section {
+    display: flex;
+    width: 60%;
+    height: auto;
+    margin-left: 100px;
+  }
+
+  .ims-welcom-right-header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ims-welcome-header-title {
+    font-size: 20px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+
+  .ims-welcome-sub-header-title {
+    width: 100%;
+    height: auto;
+    font-size: 11px;
+    line-height: 18px;
+    color: #ffffff;
+  }
+
+  .ims-welcome-illustration {
+    width: 295px;
+    height: auto;
+    padding-left: 17px;
+  }
+
+  .ims-welcome-bar-chart {
+    width: 10px;
+    height: 10px;
+    margin-top: 0px;
+    margin-left: 4px;
+    margin-bottom: 5px;
+  }
+
+  .ims-welcome-bottom-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 35px;
+    min-height: 49px;
+    padding: 5px;
+    gap: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #ffffff1a;
+    background-color: #ffffffbf;
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: start;
+  }
+
+  .ims-welcome-sub-heading-title {
+    font-weight: 600;
+    font-size: 9.6px;
+    color: #132a56;
+  }
+
+  .ims-welcome-discription {
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+    color: #111112;
+  }
+
+  .ims-welcome-sub-headings-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .ims-welcome-verified-shield {
+    width: 14px;
+    height: 16px;
+    margin-top: 0px;
+    margin-left: 4px;
+  }
+
+  .ims-welcome-bottom-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .ims-welcome-outer-bottom-container {
+    margin-left: 10px;
+  }
+
+  .ims-welcome-bottom-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top-width: 1px;
+    padding-top: 16px;
+    border-top: 1px solid #eae7e5;
+    margin-top: 24px;
+  }
+
+  .ims-welcome-image-and-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 13px;
+  }
+
+  .ims-welcome-profile-image {
+    width: 15px;
+    height: 15px;
+  }
+
+  .ims-welcome-profile-description {
+    font-weight: 600;
+    font-size: 8px;
+    color: #ffffff;
+  }
+
+  .ims-welcome-dash {
+    font-weight: 600;
+    font-size: 8px;
+    color: #ffffff;
+  }
+
+  .ims-welcome-bottom-para {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 8.5px;
+    color: #ffffff;
+    line-height: 15px;
+  }
+
+  .ims-welcome-right-title {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 15px;
+    letter-spacing: -0.8px;
+    color: #132a56;
+  }
+
+  .ims-welcome-right-sub-title {
+    width: 100%;
+    height: 14px;
+    font-size: 9.2px;
+    line-height: 18px;
+    color: #777587;
+  }
+
+  .ims-welcome-select-role-label {
+    font-weight: 700;
+    font-size: 8.9px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+
+  .ims-welcome-asterisk {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #f44336;
+  }
+
+  .ims-welcome-right-inner-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-top: 70px;
+    gap: 25px;
+  }
+
+  .ims-welcome-right-header-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
   }
 }

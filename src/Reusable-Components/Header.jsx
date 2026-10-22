@@ -1,5 +1,5 @@
 import React from "react";
-import GraduateCap from "../assets/registration/graduate-cap.png";
+import GraduateCap from "../assets/reusable-components/header/graduate-cap.png";
 import "../Reusable-Components/Header.css";
 
 export const Header = () => {

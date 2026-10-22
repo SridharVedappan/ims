@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { RoleSelector } from "../Reusable-Components/RoleSelector";
 import "../Components-Registration/Welcome.css";
 import Profile from "../assets/registration/welcome/welcom-profile-icon.png";
 import VerifiedShield from "../assets/registration/welcome/verified-shield-icon.png";
@@ -7,28 +8,9 @@ import WelcomeIllustartion from "../assets/registration/welcome/welcome-illustar
 import BarChart from "../assets/registration/welcome/bar-chart-icon.png";
 
 export const Welcome = () => {
-  const [role, setRole] = useState("");
-
-  const navigate = useNavigate();
-
-  const handleRoleChange = (e) => {
-    const selectedRole = e.target.value;
-
-    setRole(selectedRole);
-
-    if (selectedRole === "intern") {
-      navigate("/intern-login");
-    } else if (selectedRole === "mentor") {
-      navigate("/Mentor-Registeration");
-    } else if (selectedRole === "hr") {
-      navigate("/hr-login");
-    } else if (selectedRole === "company") {
-      navigate("/company-login");
-    } else if (selectedRole === "admin") {
-      navigate("/admin-login");
-    }
-  };
-
+  const [selectRole, setSelectRole] = useState(
+    location.state?.selectedRole || "",
+  );
   return (
     <div className="ims-welcome-container">
       <div className="ims-welcome-inner-container">
@@ -103,8 +85,9 @@ export const Welcome = () => {
                   className="ims-welcome-profile-image"
                 />
                 <p className="ims-welcome-profile-description">
-                  Dr. Elena Vance <span>&mdash;</span> Dean of Experiential
-                  Education, Global University Network
+                  Dr. Elena Vance{" "}
+                  <span className="ims-welcome-dash">&mdash;</span> Dean of
+                  Experiential Education, Global University Network
                 </p>
               </div>
             </div>
@@ -122,25 +105,7 @@ export const Welcome = () => {
                 registration
               </p>
             </header>
-
-            <div className="ims-welcome-role-selector">
-              <label className="ims-welcome-select-role-label">
-                Registering As <span className="ims-welcome-asterisk">*</span>
-              </label>
-
-              <select
-                value={role}
-                onChange={handleRoleChange}
-                className="ims-welcome-selector"
-              >
-                <option value="">Select role</option>
-                <option value="intern">Intern</option>
-                <option value="mentor">Mentor</option>
-                <option value="hr">HR</option>
-                <option value="company">Company</option>
-                <option value="admin">Admin</option>
-              </select>
-            </div>
+            <RoleSelector selectRole={selectRole} onChange={setSelectRole} />
           </div>
         </div>
       </div>
