@@ -129,11 +129,14 @@ export const AdminRegistration = () => {
           </div>
           <div className="ims-admin-bottom-cards-container">
             <div className="ims-admin-bottom-card">
-              <img
-                src={WhiteShield}
-                alt="shield-icon"
-                className="ims-admin-sheild-icon"
-              />
+              <div className="ims-admin-bottom-card-image-container">
+                {" "}
+                <img
+                  src={WhiteShield}
+                  alt="shield-icon"
+                  className="ims-admin-sheild-icon"
+                />
+              </div>
               <div className="ims-mentor-card-info-container">
                 <h1 className="ims-admin-card-header">Role-based access</h1>
                 <p className="ims-admin-card-description">
@@ -142,11 +145,15 @@ export const AdminRegistration = () => {
               </div>
             </div>
             <div className="ims-admin-bottom-card">
-              <img
-                src={WhiteShield}
-                alt="shield-icon"
-                className="ims-admin-sheild-icon"
-              />
+              <div className="ims-admin-bottom-card-image-container">
+                {" "}
+                <img
+                  src={WhiteShield}
+                  alt="shield-icon"
+                  className="ims-admin-sheild-icon"
+                />
+              </div>
+
               <div className="ims-mentor-card-info-container">
                 <h1 className="ims-admin-card-header">Trusted & Secure</h1>
                 <p className="ims-admin-card-description">
