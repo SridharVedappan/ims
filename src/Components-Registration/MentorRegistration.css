@@ -2,9 +2,9 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: 1920px;
-  /* overflow: hidden; */
+  margin: auto;
   padding: 55px 80px;
   background: linear-gradient(270deg, #ffffff 35%, #566b93 93%);
 }
@@ -447,95 +447,6 @@
   color: red;
 }
 
-@media screen and (min-width: 1600px) and (min-height: 900px) {
-  .ims-mentor-conatiner {
-    width: 100%;
-    max-width: 1920px;
-    min-height: 100vh;
-    height: auto;
-    margin: 0 auto;
-    padding: 40px;
-    box-sizing: border-box;
-  }
-
-  .ims-mentor-inner-container {
-    width: 100%;
-    gap: 24px;
-  }
-
-  .ims-mentor-left-section,
-  .ims-mentor-right-section {
-    width: calc(50% - 12px);
-    min-width: 0;
-  }
-
-  .Ims-MentorRegister-leftcontent {
-    width: 100%;
-  }
-
-  .Ims-MentorRegister-vector-stock {
-    max-width: 100%;
-    height: 350px;
-    padding-left: 0;
-    margin: 0 auto 20px;
-    object-fit: contain;
-  }
-
-  .Ims-MentorRegister-bottomcard {
-    width: 100%;
-    max-width: 600px;
-    box-sizing: border-box;
-  }
-
-  .Ims-MentorRegister-bottomcontent p {
-    font-size: 12px;
-  }
-
-  .Ims-MentorRegister-bottomcard {
-    width: 580px;
-  }
-
-  .mentor-input-conatiner input,
-  .ims-mentor-input-inner-container,
-  .ims-mentor-Experience select {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .ims-mentor-form-row-container {
-    gap: 16px;
-  }
-
-  .ims-mentor-form-row-container > .mentor-input-conatiner,
-  .ims-mentor-form-row-container > .ims-mentor-input-outer-container {
-    flex: 1 1 0;
-    min-width: 0;
-  }
-
-  .ims-mentor-phoneNumber-conatiner {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .ims-mentor-phoneNumber-conatiner input {
-    flex: 1;
-    min-width: 0;
-    width: 0;
-  }
-
-  .ims-mentor-divider-container {
-    width: 100%;
-    max-width: 835px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .ims-mentor-divider {
-    flex: 1 1 0;
-    min-width: 0;
-  }
-}
-
 @media screen and (min-width: 1025px) and (max-width: 1599px) {
   .ims-mentor-right-section {
     min-width: 0;
@@ -703,7 +614,13 @@
     gap: 29px;
   }
 
-  .ims-mentor-left-section,
+  .ims-mentor-left-section {
+    width: calc(50% - 12px);
+    min-width: 0;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+
   .ims-mentor-right-section {
     width: calc(50% - 12px);
     min-width: 0;
