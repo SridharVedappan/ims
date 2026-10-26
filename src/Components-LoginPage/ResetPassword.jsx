@@ -5,8 +5,8 @@ import GraduateCap from "../assets/login/graduate-cap.png";
 import WhiteShield from "../assets/login/white-shield.png";
 import SetPasswordIllustration from "../assets/login/set-password-vector-illustration.png";
 import ResetIcon from "../assets/login/reset-icon.png";
-import UnCheck from "../assets/login/uncheck.png";
-import Check from "../assets/login/check.png";
+import Check from "../assets/login/green-checked-mark.png";
+import UnCheck from "../assets/login/uncheck-mark.png";
 import PasswordIcon from "../assets/login/PasswordIcon.png";
 import SecureShield from "../assets/login/secure-shield.png";
 

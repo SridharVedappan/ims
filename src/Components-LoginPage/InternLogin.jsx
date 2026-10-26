@@ -6,7 +6,7 @@ import LoginRisingMark from "../assets/login/rise-mark.png";
 import VectorStock from "../assets/login/login-vector-stock.png";
 import BlueShield from "../assets/login/blue-shield.png";
 import WhiteShield from "../assets/login/white-shield.png";
-import MailIcon from "../assets/login/MailIcon.png";
+import MailIcon from "../assets/login/mail-icon.png";
 import PasswordIcon from "../assets/login/PasswordIcon.png";
 import RightArrow from "../assets/login/right-arrow.png";
 import GoogleIcon from "../assets/login/google-icon.png";
