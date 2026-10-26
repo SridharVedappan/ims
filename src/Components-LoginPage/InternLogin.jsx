@@ -225,7 +225,10 @@ export const InternLogin = () => {
                   <label htmlFor="password" className="login-input-label">
                     Password
                   </label>
-                  <Link to="/forgot-password" className="forgot-password">
+                  <Link
+                    to="/Components-LoginPage/forgot-password"
+                    className="forgot-password"
+                  >
                     Forgot Password?
                   </Link>
                 </div>

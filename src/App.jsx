@@ -12,36 +12,36 @@ import { Welcome } from "./Components-Registration/Welcome.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/Login",
+    path: "/Components-LoginPage/Login",
     element: <InternLogin />,
   },
   {
-    path: "/forgot-password",
+    path: "/Components-LoginPage/forgot-password",
     element: <ForgotPassword />,
   },
 
   {
-    path: "/OTPforgetpassword",
+    path: "/Components-LoginPage/OTPforgetpassword",
     element: <OTPforgetpassword />,
   },
   {
-    path: "/reset-Password",
+    path: "/Components-LoginPage/reset-Password",
     element: <ResetPassword />,
   },
   {
-    path: "/password-resetSuccess",
+    path: "/Components-LoginPage/password-resetSuccess",
     element: <PasswordResetSuccess />,
   },
   {
-    path: "/Mentor-Registration",
+    path: "/Components-Registration/Mentor-Registration",
     element: <MentorRegistration />,
   },
   {
-    path: "/welcome",
+    path: "/Components-Registration/welcome",
     element: <Welcome />,
   },
   {
-    path: "/Admin-Registration",
+    path: "/Components-Registration/Admin-Registration",
     element: <AdminRegistration />,
   },
 ]);

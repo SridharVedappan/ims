@@ -45,7 +45,7 @@ export const OTPforgetpassword = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      navigate("/reset-Password");
+      navigate("/Components-LoginPage/reset-Password");
     }
   };
 

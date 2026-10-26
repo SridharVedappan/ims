@@ -63,7 +63,7 @@ export const ResetPassword = () => {
 
     if (Object.keys(newError).length === 0) {
       setFormValue(initialValue);
-      navigate("/password-resetSuccess");
+      navigate("/Components-LoginPage/password-resetSuccess");
     }
   };
 
@@ -205,7 +205,7 @@ export const ResetPassword = () => {
             <div className="ims-rp-password-rules">
               <div className="ims-rp-rule">
                 <img
-                  src={!isPasswordLengthValid ? Check : UnCheck}
+                  src={!isPasswordLengthValid ? UnCheck : Check}
                   alt="Checker"
                   className="ims-rp-checker-icon"
                 />
@@ -215,7 +215,7 @@ export const ResetPassword = () => {
 
               <div className="ims-rp-rule">
                 <img
-                  src={!isPasswordMatchValid ? Check : UnCheck}
+                  src={!isPasswordMatchValid ? UnCheck : Check}
                   alt="Checker"
                   className="ims-rp-checker-icon"
                 />
@@ -228,7 +228,7 @@ export const ResetPassword = () => {
               Update Password
             </button>
           </form>
-          <Link to="/login">Back to Login</Link>
+          <Link to="/Components-LoginPage/Login">Back to Login</Link>
         </div>
       </div>
     </div>

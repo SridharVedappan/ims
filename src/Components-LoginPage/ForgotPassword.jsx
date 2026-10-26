@@ -16,7 +16,7 @@ export const ForgotPassword = () => {
   const navigate = useNavigate();
 
   const handleSendCode = () => {
-    navigate("/OTPforgetpassword");
+    navigate("/Components-LoginPage/OTPforgetpassword");
   };
 
   return (
