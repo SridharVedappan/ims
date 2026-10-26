@@ -4,13 +4,12 @@ import { Link, useNavigate } from "react-router-dom";
 import "./AdminRegistration.css";
 import "../Components-Registration/AdminRegistration.css";
 import { Header } from "../Reusable-Components/Header";
-import AdminIcon from "../assets/Registration/admin/admin-icon.png";
-import ShowPassword from "../assets/Registration/admin/show-password.png";
-import HidePassword from "../assets/Registration/admin/hide-password.png";
-import DropdownArrow from "../assets/Registration/admin/drop-down-arrow.png";
-
-import AdminIllustartion from "../assets/registration/admin/admin-vector-illustration.png";
-import WhiteShield from "../assets/registration/admin/shield.png";
+import AdminIcon from "../assets/Registration/admin-icon.png";
+import ShowPassword from "../assets/Registration/eye-open.png";
+import HidePassword from "../assets/Registration/eye-close.png";
+import DropdownArrow from "../assets/Registration/drop-down-arrow.png";
+import AdminIllustartion from "../assets/registration/admin-vector-illustration.png";
+import WhiteShield from "../assets/registration/shield.png";
 
 export const AdminRegistration = () => {
   const [formData, setFormData] = useState({

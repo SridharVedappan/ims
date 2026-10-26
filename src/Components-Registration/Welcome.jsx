@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { RoleSelector } from "../Reusable-Components/RoleSelector";
 import "../Components-Registration/Welcome.css";
-import Profile from "../assets/registration/welcome/welcom-profile-icon.png";
-import VerifiedShield from "../assets/registration/welcome/verified-shield-icon.png";
-import WelcomeIllustartion from "../assets/registration/welcome/welcome-illustartion.png";
-import BarChart from "../assets/registration/welcome/bar-chart-icon.png";
+import Profile from "../assets/registration/welcom-profile-icon.png";
+import VerifiedShield from "../assets/registration/verified-shield-icon.png";
+import WelcomeIllustartion from "../assets/registration/welcome-illustartion.png";
+import BarChart from "../assets/registration/bar-chart-icon.png";
 
 export const Welcome = () => {
   const [selectRole, setSelectRole] = useState(

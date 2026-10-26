@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom";
 export const RoleSelector = ({ selectRole = "", onChange }) => {
   const roleRoutes = {
     intern: "/Intern-Registration",
-    mentor: "/Mentor-Registration",
+    mentor: "/Components-Registration/Mentor-Registration",
     hr: "/Hr-Registration",
     company: "/Company-Registration",
-    admin: "/Admin-Registration",
+    admin: "/Components-Registration/Admin-Registration",
   };
 
   const navigate = useNavigate();
