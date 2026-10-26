@@ -2,12 +2,13 @@ import React from "react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./AdminRegistration.css";
+import "../Components-Registration/AdminRegistration.css";
+import { Header } from "../Reusable-Components/Header";
 import AdminIcon from "../assets/Registration/admin/admin-icon.png";
 import ShowPassword from "../assets/Registration/admin/show-password.png";
 import HidePassword from "../assets/Registration/admin/hide-password.png";
 import DropdownArrow from "../assets/Registration/admin/drop-down-arrow.png";
-import { Header } from "../Reusable-Components/Header";
-import "../Components-Registration/AdminRegistration.css";
+
 import AdminIllustartion from "../assets/registration/admin/admin-vector-illustration.png";
 import WhiteShield from "../assets/registration/admin/shield.png";
 

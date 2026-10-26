@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { RoleSelector } from "../Reusable-Components/RoleSelector";
 import { Link, useNavigate } from "react-router-dom";
 import "./MentorRegistration.css";
+import { Header } from "../Reusable-Components/Header.jsx";
 import MentorRegistermainimage from "../assets/registration/mentor/mentor-register-illustartion-image.png";
 import MentorRegisterWhiteShield from "../assets/registration/mentor/mentor-register-shield.png";
 import MentorRegisterconnections from "../assets/registration/mentor/mentor-register-connections.png";
 import MentorRegisterstars from "../assets/registration/mentor/mentor-register-stars.png";
 import EyeOpenIcon from "../assets/registration/mentor/eye-open.png";
 import EyeCloseIcon from "../assets/registration/mentor/eye-close.png";
-import { Header } from "../Reusable-Components/Header.jsx";
 
 export const MentorRegistration = () => {
   const initialValues = {
