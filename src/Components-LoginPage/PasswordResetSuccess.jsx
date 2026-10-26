@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import "../Components-LoginPage/PasswordResetSuccess.css";
 import BlueGraduateCap from "../assets/login/blue-garduate-cap.png";
 import ResetSuccessRightmark from "../assets/login/reset-sucess.png";
-import Resetsuccesssecuritylock from "../assets/login/reset-sucess security-lock.png";
-import PasswordResetSuccessIllustration from "../assets/login/password-reset-success.png";
+import Resetsuccesssecuritylock from "../assets/login/reset-success security-lock.png";
+import PasswordResetSuccessIllustration from "../assets/login/reset-sucess.png";
 import WhiteShield from "../assets/login/white-shield.png";
 
 export const PasswordResetSuccess = () => {

@@ -9,6 +9,7 @@ import { PasswordResetSuccess } from "./Components-LoginPage/PasswordResetSucces
 import { MentorRegistration } from "./Components-Registration/MentorRegistration.jsx";
 import { AdminRegistration } from "./Components-Registration/AdminRegistration.jsx";
 import { Welcome } from "./Components-Registration/Welcome.jsx";
+import { RegistrationOTP } from "./Components-Registration/RegistrationOTP.jsx";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "/Components-Registration/Admin-Registration",
     element: <AdminRegistration />,
+  },
+  {
+    path: "/Components-Registration/Registration-OTP",
+    element: <RegistrationOTP />,
   },
 ]);
 
