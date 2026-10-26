@@ -44,12 +44,23 @@
   .ims-welcome-selector {
     width: 100%;
   }
+  .ims-welcome-role-selector {
+    width: 100%;
+  }
 }
 
 /* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .ims-welcome-role-selector {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3px;
+    color: #132a56;
+  }
+
   .ims-welcome-selector {
-    width: 90%;
+    width: 100%;
     height: 32px;
     padding: 8px 30px 8px 12px;
     box-sizing: border-box;

@@ -195,10 +195,7 @@ export const MentorRegistration = () => {
           <Header />
           <div className="Ims-MentorRegister-middle-content">
             <div className="Ims-MentorRegister-main-content">
-              <h2>
-                Empower the next generation of <br />
-                talent.
-              </h2>
+              <h2>Empower the next generation of talent.</h2>
               <p>
                 Join a community of experts dedicated to guiding students
                 through their career
@@ -215,70 +212,72 @@ export const MentorRegistration = () => {
               className="Ims-MentorRegister-vector-stock"
             />
 
-            {/* Bottom card one */}
-            <div className="Ims-MentorRegister-bottomcard-container">
-              <div className="Ims-MentorRegister-bottomcard">
-                <div className="Ims-MentorRegister-bottomrightcard">
-                  <img
-                    src={MentorRegisterWhiteShield}
-                    alt="Mentor-white-shield"
-                    className="Ims-MentorRegister-whiteshield"
-                  />
-                </div>
-                <div className="Ims-MentorRegister-bottomcontent">
-                  <strong>Industry Impact</strong>
-                  <p>
-                    Bridge the gap between academic learning and real-world
-                    excellence.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom card two */}
-            <div className="Ims-MentorRegister-bottomcardtwo-container">
-              <div className="Ims-MentorRegister-bottomcard">
-                <div className="Ims-MentorRegister-bottomrightcard">
-                  <img
-                    src={MentorRegisterconnections}
-                    alt="Mentor-connections"
-                    style={{
-                      color: "#FFFFFF",
-                      width: "16px",
-                      height: "9px",
-                    }}
-                  />
-                </div>
-                <div className="Ims-MentorRegister-bottomcontent">
-                  <strong>Meaningful Connections</strong>
-                  <p>
-                    Build lasting professional relationships with ambitious
-                    young minds.
-                  </p>
+            <div className="ims-mentor-bottom-card-container">
+              {/* Bottom card one */}
+              <div className="Ims-MentorRegister-bottomcard-container">
+                <div className="Ims-MentorRegister-bottomcard">
+                  <div className="Ims-MentorRegister-bottomrightcard">
+                    <img
+                      src={MentorRegisterWhiteShield}
+                      alt="Mentor-white-shield"
+                      className="Ims-MentorRegister-whiteshield"
+                    />
+                  </div>
+                  <div className="Ims-MentorRegister-bottomcontent">
+                    <strong>Industry Impact</strong>
+                    <p>
+                      Bridge the gap between academic learning and real-world
+                      excellence.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Bottom card three */}
-            <div className="Ims-MentorRegister-bottomcardthree-container">
-              <div className="Ims-MentorRegister-bottomcard">
-                <div className="Ims-MentorRegister-bottomrightcard">
-                  <img
-                    src={MentorRegisterstars}
-                    alt="Mentor-Stars-image"
-                    style={{
-                      color: "#FFFFFF",
-                      width: "16px",
-                      height: "15px",
-                    }}
-                  />
+              {/* Bottom card two */}
+              <div className="Ims-MentorRegister-bottomcardtwo-container">
+                <div className="Ims-MentorRegister-bottomcard">
+                  <div className="Ims-MentorRegister-bottomrightcard">
+                    <img
+                      src={MentorRegisterconnections}
+                      alt="Mentor-connections"
+                      style={{
+                        color: "#FFFFFF",
+                        width: "16px",
+                        height: "9px",
+                      }}
+                    />
+                  </div>
+                  <div className="Ims-MentorRegister-bottomcontent">
+                    <strong>Meaningful Connections</strong>
+                    <p>
+                      Build lasting professional relationships with ambitious
+                      young minds.
+                    </p>
+                  </div>
                 </div>
-                <div className="Ims-MentorRegister-bottomcontent">
-                  <strong>Personal Growth</strong>
-                  <p>
-                    Enhance your leadership and communication skills through
-                    mentorship.
-                  </p>
+              </div>
+
+              {/* Bottom card three */}
+              <div className="Ims-MentorRegister-bottomcardthree-container">
+                <div className="Ims-MentorRegister-bottomcard">
+                  <div className="Ims-MentorRegister-bottomrightcard">
+                    <img
+                      src={MentorRegisterstars}
+                      alt="Mentor-Stars-image"
+                      style={{
+                        color: "#FFFFFF",
+                        width: "16px",
+                        height: "15px",
+                      }}
+                    />
+                  </div>
+                  <div className="Ims-MentorRegister-bottomcontent">
+                    <strong>Personal Growth</strong>
+                    <p>
+                      Enhance your leadership and communication skills through
+                      mentorship.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
