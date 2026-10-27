@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { Header } from "../Reusable-Components/Header.jsx";
 import "../Components-Registration/RegistrationOTP.css";
 import RegistrationOtp from "../assets/registration/otp/registartion-otp-illustartion.png";
@@ -12,6 +12,13 @@ export const RegistrationOTP = () => {
   const [errors, setErrors] = useState({});
   const inputRefs = useRef([]);
   const navigate = useNavigate();
+
+  const location = useLocation();
+
+  const verificationType = location.state?.verificationType;
+  const email = location.state?.email;
+  const phoneNumber = location.state?.phoneNumber;
+  const countryCode = location.state?.countryCode;
 
   const handleChange = (value, index) => {
     if (!/^\d?$/.test(value)) return;
@@ -34,18 +41,44 @@ export const RegistrationOTP = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let newErrors = {};
     const code = otp.join("");
 
     if (code.length !== 6) {
-      newErrors.verificationCode =
-        "Please enter the 6-digit verification code *";
+      setErrors({
+        verificationCode: "Please enter the 6-digit verification code *",
+      });
+      return;
     }
-    setErrors(newErrors);
 
-    if (Object.keys(newErrors).length === 0) {
-      navigate("/Components-LoginPage/reset-Password");
+    const savedData = location.state;
+
+    if (!savedData?.formValues || !savedData?.verificationType) {
+      setErrors({
+        verificationCode: "Registration session not found. Please try again.",
+      });
+      return;
     }
+
+    const fieldToVerify = verificationType === "email" ? "email" : "phone";
+
+    const updatedVerifiedFields = {
+      ...(savedData.verifiedFields || {
+        email: false,
+        phone: false,
+      }),
+      [fieldToVerify]: true,
+    };
+
+    setErrors({});
+
+    navigate("/Components-Registration/Mentor-Registration", {
+      state: {
+        formValues: savedData.formValues,
+        termsAccepted: savedData.termsAccepted,
+        verifiedFields: updatedVerifiedFields,
+        selectRole: savedData.selectRole,
+      },
+    });
   };
   return (
     <div className="ims-reg-otp-container ">
