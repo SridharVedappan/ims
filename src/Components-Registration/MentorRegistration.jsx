@@ -28,7 +28,6 @@ export const MentorRegistration = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Restore form values after from the OTP verify.
   const [formValues, setFormValues] = useState(
     () => location.state?.formValues || { ...initialValues },
   );
@@ -195,7 +194,6 @@ export const MentorRegistration = () => {
       [fieldName]: "",
     }));
 
-    // Pass the form data to the OTP route for temporery store.
     navigate("/Components-Registration/Registration-OTP", {
       state: {
         verificationType: type,
@@ -287,7 +285,6 @@ export const MentorRegistration = () => {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      // Replace this with your registration API call.
       console.log("Registration data:", formValues);
 
       setFormValues({ ...initialValues });
